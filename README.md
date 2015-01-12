@@ -1,6 +1,6 @@
 # Templates for naming convention
 
-## Usefull Links
+## Usefull links for name conventions
  - [MSDN C#]
  - [MSDN ASP.NET MVC]
  - [Google's R Style Guide]
@@ -11,9 +11,9 @@
 ## Relation Database
  - SQL Server ([SQL Server 2012 Documentation])
  - SQLite ([SQLite Documentation])
- - PostgreSQL ([PostgreSQL 9.3 Manual])
- - Oracle
- - MySQL
+ - PostgreSQL ([PostgreSQL Manual])
+ - Oracle Database ([Oracle DB documentation])
+ - MySQL ([MySQL documentation])
 
 ## Programm Language
  - C# Language ([C# Programming Guide])
@@ -32,7 +32,9 @@
 
 [SQL Server 2012 Documentation]:http://technet.microsoft.com/library/bb418433%28v=sql.10%29.aspx
 [SQLite Documentation]:https://www.sqlite.org/docs.html
-[PostgreSQL 9.3 Manual]:http://www.postgresql.org/docs/9.3/interactive/index.html
+[PostgreSQL Manual]:http://www.postgresql.org/docs/current/static/
+[Oracle DB documentation]:https://docs.oracle.com/en/database/database.html
+[MySQL documentation]:http://docs.oracle.com/cd/E17952_01/index.html
 
 [Standard ECMA-262]:http://www.ecma-international.org/publications/standards/Ecma-262.htm
 [Microsoft JavaScript Language Reference]:http://msdn.microsoft.com/en-us/library/ie/d1et7k7c%28v=vs.94%29.aspx
