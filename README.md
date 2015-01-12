@@ -5,7 +5,7 @@
  - [MSDN ASP.NET MVC]
  - [Google's R Style Guide]
  - [Google Python Style Guide]
- - []
+ - [MSDN Powershell Style Guide]
 
 ## Relation Database
  - SQL Server ([SQL Server 2012 Documentation])
