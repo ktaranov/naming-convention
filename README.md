@@ -5,6 +5,7 @@
  - [MSDN ASP.NET MVC]
  - [Google's R Style Guide]
  - [Google Python Style Guide]
+ - []
 
 ## Relation Database
  - SQL Server ([SQL Server 2012 Documentation])
@@ -25,6 +26,7 @@
 [MSDN ASP.NET MVC]:http://msdn.microsoft.com/en-us/library/ms229042.aspx
 [Google's R Style Guide]:http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 [Google Python Style Guide]:https://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+[MSDN Powershell Style Guide]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
 
 [SQL Server 2012 Documentation]:http://technet.microsoft.com/library/bb418433%28v=sql.10%29.aspx
 [SQLite Documentation]:https://www.sqlite.org/docs.html
