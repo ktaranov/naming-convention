@@ -1,4 +1,4 @@
-## C# Coding Standards and Naming Conventions ##
+# C# Coding Standards and Naming Conventions
 
 
 | SQL Server Object Name    | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask          |Underscores  |
@@ -6,7 +6,7 @@
 | Class name                | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Constructor name          | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Method name               | PascalCase |    128 | Yes    | No     | No     | No           | [A-z][0-9]         | No          |
-| Method arguments          | camelCase  |    128 | Yes    | No     | No     | Yes          | [A-z][0-9]		 | No          |
+| Method arguments          | camelCase  |    128 | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Local variables           | camelCase  |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Constants name            | PascalCase |    50  | No     | No     | No     | No           | [A-z][0-9]         | No          |
 | Field name                | camelCase  |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | Yes         |
