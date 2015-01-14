@@ -8,7 +8,7 @@
 | Constants name     | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Field name         | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 
-***
+
 Coding conventions are style guidelines for programming. They typically cover:
 
 1. Naming and declaration rules for variables and functions.
@@ -32,9 +32,11 @@ Always use the same naming convention for all your code. For example:
 
 Do use PascalCasing for function names:
 
+```javascript
 	function HelloWorld()	
 	{
 	}
+```
 
 Do use camelCasing for function arguments and local variables: 
 
