@@ -6,10 +6,10 @@
 | Class name                | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Constructor name          | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Method name               | PascalCase |    128 | Yes    | No     | No     | No           | [A-z][0-9]         | No          |
-| Method arguments          | CamelCase  |    128 | Yes    | No     | No     | Yes          | [A-z][0-9]		 | No          |
-| Local variables           | CamelCase  |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
+| Method arguments          | camelCase  |    128 | Yes    | No     | No     | Yes          | [A-z][0-9]		 | No          |
+| Local variables           | camelCase  |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Constants name            | PascalCase |    50  | No     | No     | No     | No           | [A-z][0-9]         | No          |
-| Field name                | CamelCase  |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | Yes         |
+| Field name                | camelCase  |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | Yes         |
 | Properties name           | PascalCase |    50  | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Delegate name             | PascalCase |    128 | No     | No     | Yes    | Yes          | [A-z]              | No          |
 | Enum type name            | PascalCase |    128 | Yes    | No     | No     | No           | [A-z]              | No          |
@@ -60,7 +60,7 @@ public class ClientActivity
 
 ***Why: consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy (via tooltips). In general you want to avoid type indicators in any identifier.***
 
-#### 4. Do notuse Screaming Caps for constants or readonly variables 
+#### 4. Do not use Screaming Caps for constants or readonly variables 
 ```csharp
     // Correct
     public static const string ShippingType = "DropShip";    
