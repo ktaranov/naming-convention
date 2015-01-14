@@ -9,7 +9,7 @@
 | Field name         | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 
 
-##Coding conventions are style guidelines for programming. They typically cover:
+## Coding conventions are style guidelines for programming. They typically cover:
 
 1. Naming and declaration rules for variables and functions.
 1. Rules for the use of white space, indentation, and comments.
@@ -55,7 +55,7 @@ Do use camelCasing for function arguments and local variables:
 
 *Note: Don't start names with a $ sign. It will put you in conflict with many JavaScript library names.*
 
-#### Spaces Around Operators
+### Spaces Around Operators
 
 Always put spaces around operators ( = + / * ), and after commas:
 
