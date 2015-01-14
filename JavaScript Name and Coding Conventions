@@ -7,6 +7,7 @@
 | Local variables    | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Constants name     | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Field name         | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
+
 ***
 Coding conventions are style guidelines for programming. They typically cover:
 
@@ -26,7 +27,8 @@ Always use the same naming convention for all your code. For example:
 4. Do not use under_scores in variable, constants, function arguments or function names;
 5. Do not use hyphens in JavaScript names.
 ***
-#### Naming Conventions
+
+## Naming Conventions
 
 Do use PascalCasing for function names:
 
