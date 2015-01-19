@@ -5,7 +5,7 @@
 | Object                        | Code | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask    | Example                            |
 | ----------------------------- | ---- | ---------- | ------ | ------ | ------ | ------ | ------------ | ------------ | --------------------------------   |
 | Database                      |      | UPPERCASE  |     30 | No     | No     | No     | Yes          | [A-z]        | MYDATABASE                         |
-| Database Trigger              |      | PascalCase |    128 | No     | DTR_   | No     | Yes          | [A-z]        | DTR_CheckLogin                     |
+| Database Trigger              |      | PascalCase |     50 | No     | DTR_   | No     | Yes          | [A-z]        | DTR_CheckLogin                     |
 | Schema                        |      | lowercase  |     30 | No     | No     | No     | Yes          | [A-z][0-9]   | myschema                           |
 | File Table                    |      | PascalCase |    128 | No     | FT_    | No     | Yes          | [A-z][0-9]   | FT_MyTable                         |
 | Global Temporary Table        |      | PascalCase |    118 | No     | No     | No     | Yes          | ##[A-z][0-9] | ##MyTable                          |
@@ -23,13 +23,14 @@
 | Table Trigger                 | TR   | PascalCase |    128 | No     | TR_    | No     | Yes          | [A-z][0-9]   | TR_MyTable_LogicalName             |
 | View                          | V    | PascalCase |    128 | No     | VI_    | No     | No           | [A-z][0-9]   | VI_LogicalName                     |
 | Stored Procedure              | P    | PascalCase |    128 | No     | usp_   | No     | No           | [A-z][0-9]   | usp_LogicalName                    |
-| User-Defined Functions        | FN   | PascalCase |    128 | No     | udf_   | No     | No           | [A-z][0-9]   | udf_LogicalName                    |
+| Scalar User-Defined Functions | FN   | PascalCase |     50 | No     | udf_   | No     | No           | [A-z][0-9]   | udf_FunctionLogicalName            |
+| Table-Valued Functions        | FN   | PascalCase |     50 | No     | tvf_   | No     | No           | [A-z][0-9]   | tvf_FunctionLogicalName            |
 | Synonim                       | SN   | camelCase  |    128 | No     | sy_    | No     | No           | [A-z][0-9]   | sy_logicalName                     |
 | Sequence                      | SO   | PascalCase |    128 | No     | sq_    | No     | No           | [A-z][0-9]   | sq_TableName                       |
-| CLR Assembley                 |      | PascalCase |    128 | No     | CA     | No     | Yes          | [A-z][0-9]   | CALogicalName                    |
+| CLR Assembley                 |      | PascalCase |    128 | No     | CA     | No     | Yes          | [A-z][0-9]   | CALogicalName                      |
 | CLR Stored Procedures         | PC   | PascalCase |    128 | No     | pc_    | No     | Yes          | [A-z][0-9]   | pc_CAName_LogicalName              |
 
-                                                                           
+
 ## Offical Reference
  - [Database object TECHNET] (Limitations)
  - [User-Defined Functions MSDN]
@@ -39,7 +40,8 @@
  - [Constraints TECHNET]
  - [CHECK Constraint TECHNET]
  - [SQL Server CLR Integration MSDN]
- - [CLR Databse Objects MSDN] 
+ - [CLR Databse Objects MSDN]
+ - [User-defined Functions]
  
 [Database object TECHNET]:http://technet.microsoft.com/en-us/library/ms172451%28v=sql.110%29.aspx
 [User-Defined Functions MSDN]:http://msdn.microsoft.com/en-us/library/ms191007.aspx
@@ -51,3 +53,4 @@
 [SQL Server CLR Integration MSDN]:http://msdn.microsoft.com/en-us/library/ms254498%28v=vs.110%29.aspx
 [CLR Databse Objects MSDN]:http://msdn.microsoft.com/en-us/library/ms345099%28SQL.100%29.aspx
 [CLR Stored Procedures]:http://msdn.microsoft.com/en-us/library/ms131094%28v=sql.100%29.aspx
+[User-defined Functions]:http://msdn.microsoft.com/en-us/library/ms191320.aspx
