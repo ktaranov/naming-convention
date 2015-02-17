@@ -31,6 +31,9 @@
 | CLR Stored Procedures            |PC    | PascalCase |    128 | No     | pc_    | No     | Yes          | [A-z][0-9]   | pc_CAName_LogicalName              |
 | CLR Scalar User-Defined Function |      | PascalCase |     50 | No     | cudf_  | No     | No           | [A-z][0-9]   | cudf_CAName_LogicalName            |
 | CLR Table-Valued Function        |      | PascalCase |     50 | No     | ctvf_  | No     | No           | [A-z][0-9]   | ctvf_CAName_LogicalName            |
+| CLR User-Defined Aggregates      |      | PascalCase |     50 | No     | ca_    | No     | No           | [A-z][0-9]   | ca_CAName_LogicalName              |
+| CLR  User-Defined Types          |      | PascalCase |     50 | No     | ct_    | No     | No           | [A-z][0-9]   | ct_CAName_LogicalName              |
+| CLR  Triggers                    |      | PascalCase |     50 | No     | ctr_   | No     | No           | [A-z][0-9]   | ctr_CAName_LogicalName             |
 
 
 ## Offical Reference
