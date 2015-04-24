@@ -2,7 +2,7 @@
 
 
 | SQL Server Object Name    | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask          |Underscores  |
-| ------------------------- | ---------- | ------ | ------ | ------ | ------ | ------------ | -------------------|-------------|
+|:--------------------------|:-----------|-------:|:-------|:-------|:-------|:-------------|:-------------------|:------------|
 | Class name                | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Constructor name          | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Method name               | PascalCase |    128 | Yes    | No     | No     | No           | [A-z][0-9]         | No          |
