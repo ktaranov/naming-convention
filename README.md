@@ -1,4 +1,10 @@
 # Templates for naming convention
+ - [C# Coding Standards and Naming Conventions](C%23 Coding Standards and Naming Conventions.md)
+ - [Git Comment Convention](Git Comment Convention.md)
+ - [JavaScript Name and Coding Conventions](JavaScript Name and Coding Conventions.md)
+ - [Powershell name convention](Powershell.md)
+ - [R style guide and name convention](R style guide and name convention.md)
+ - [SQL Server Name Convention](SQL Server Name Convention.md)
 
 ## Usefull links for name conventions
  - [MSDN C#]
