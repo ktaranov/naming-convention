@@ -34,6 +34,7 @@ Don't use underscores ( _ ) or hyphens ( - ) in identifiers. Identifiers should 
    **BAD:** calculate_avg_clicks , calculateAvgClicks
 
  Make function names verbs. 
+
 *Exception: When creating a classed object, the function name (constructor) and class should match (e.g., lm).*
  - kConstantName 
 
@@ -46,11 +47,13 @@ The maximum line length is 80 characters.
 ### Indentation
 
 When indenting your code, use two spaces. Never use tabs or mix tabs and spaces. 
+
 *Exception: When a line break occurs inside parentheses, align the wrapped line with the first character inside the parenthesis.*
 
 ### Spacing
 
 Place spaces around all binary operators (=, +, -, <-, etc.). 
+
 *Exception: Spaces around ='s are optional when passing parameters in a function call.*
 
 Do not place a space before a comma, but always place one after a comma.
@@ -90,6 +93,7 @@ plot (x    = x.coord,
       main = (paste(metric, " for 3 samples ", sep = "")))
 ```
 Do not place spaces around code in parentheses or square brackets.
+
 *Exception: Always place a space after a comma.*
 
 **GOOD:**
@@ -105,6 +109,7 @@ x[1,]  # Needs a space after the comma
 ### Curly Braces
 
 An opening curly brace should never go on its own line; a closing curly brace should always go on its own line. You may omit curly braces when a block consists of a single statement; however, you must consistently either use or not use curly braces for single statement blocks.
+
 **GOOD:**
 ```
 if (is.null(ylim)) {
@@ -125,6 +130,7 @@ if (is.null(ylim)) {ylim <- c(0, 0.06)}
 Surround "else" with braces.
 
 An "else" statement should always be surrounded on the same line by curly braces.
+
 **GOOD:**
 ```
 if (condition) {
@@ -197,6 +203,7 @@ hist(df$pct.spent,
 Function definitions should first list arguments without default values, followed by those with default values. 
 
 In both function definitions and function calls, multiple arguments per line are allowed; line breaks are only allowed between assignments.
+
 **GOOD:**
 ```
 PredictCTR <- function(query, property, numDays,
