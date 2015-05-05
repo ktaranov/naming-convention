@@ -15,17 +15,24 @@
 File names should end in .R, delimeter '\_', lowercase notation and, of course, be meaningful.
  
 **GOOD:** predict\_ad\_revenue.R
-**BAD:** foo.R 
+
+**BAD:** foo.R
 
 ### Identifiers
 
 Don't use underscores ( _ ) or hyphens ( - ) in identifiers. Identifiers should be named according to the following conventions. Variable names have initial lower case letters. If variable name consists of several words, then they aren't separated, but all words except for the first one begin with capital letters. Function names are formed like variable names but with initial capital letter (FunctionName); constants are named like functions but with an initial k.
  - variableName
-** GOOD:** avgClicks 
-**BAD:** avg_Clicks 
+
+   **GOOD:** avgClicks 
+
+   **BAD:** avg_Clicks
+
  - FunctionName  
-** GOOD:** CalculateAvgClicks 
-** BAD:** calculate_avg_clicks , calculateAvgClicks
+
+   **GOOD:** CalculateAvgClicks 
+
+   **BAD:** calculate_avg_clicks , calculateAvgClicks
+
  Make function names verbs. 
 *Exception: When creating a classed object, the function name (constructor) and class should match (e.g., lm).*
  - kConstantName 
