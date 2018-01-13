@@ -1,14 +1,14 @@
 # Templates for naming convention
- - [C# Coding Standards and Naming Conventions](C%23 Coding Standards and Naming Conventions.md)
- - [Git Comment Convention](Git Comment Convention.md)
- - [JavaScript Name and Coding Conventions](JavaScript Name and Coding Conventions.md)
+ - [C# Coding Standards and Naming Conventions](C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
+ - [Git Comment Convention](Git%20Comment%20Convention.md)
+ - [JavaScript Name and Coding Conventions](JavaScript%20Name%20and%20Coding%20Conventions.md)
  - [Powershell name convention](Powershell.md)
- - [R style guide and name convention](R style guide and name convention.md)
- - [SQL Server Name Convention](SQL Server Name Convention.md)
+ - [R style guide and name convention](R%20style%20uide%20and%20name%20convention.md)
+ - [SQL Server Name Convention and T-SQL Programming Style](SQL%20Server%20Name%20Convention%20and%20T-SQL%20Programming%20Style.md)
 
 ## Usefull links for name conventions
- - [MSDN C#]
- - [MSDN ASP.NET MVC]
+ - [NET Naming Guidelines]
+ - [Framework Design Guidelines]
  - [Google's R Style Guide]
  - [Google Python Style Guide]
  - [MSDN Powershell Style Guide]
@@ -37,8 +37,8 @@
  - [Colin Gillespie’s R style guide]
  - [Hadley Wickham’s style guide]
 
-[MSDN C#]:http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx
-[MSDN ASP.NET MVC]:http://msdn.microsoft.com/en-us/library/ms229042.aspx
+[NET Naming Guidelines]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
+[Framework Design Guidelines]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index
 [Google's R Style Guide]:http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 [Google Python Style Guide]:https://google-styleguide.googlecode.com/svn/trunk/pyguide.html
 [MSDN Powershell Style Guide]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx

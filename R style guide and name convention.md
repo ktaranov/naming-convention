@@ -8,15 +8,16 @@
 | Data Frame           | PascalCase    |    30   | No       | df_      | No       | No           | df_[A-z]+  | df_AvgClicks         |
 | Factor Variable Name | PascalCase    |    30   | No       | f        | No       | No           | f[A-z]+    | fAvgClicks           |
 
+
 ## Notation and Naming
 
 ### File Names
-
-File names should end in .R, delimeter '\_', lowercase notation and, of course, be meaningful.
+File names should end in uppercase `.R`, delimeter '\_', lowercase notation and, of course, be meaningful.
  
 **GOOD:** predict\_ad\_revenue.R
 
 **BAD:** foo.R
+
 
 ### Identifiers
 
@@ -38,21 +39,19 @@ Don't use underscores ( _ ) or hyphens ( - ) in identifiers. Identifiers should 
 *Exception: When creating a classed object, the function name (constructor) and class should match (e.g., lm).*
  - kConstantName 
 
+
 ## Syntax
 
 ### Line Length
-
 The maximum line length is 80 characters.
 
 ### Indentation
-
 When indenting your code, use two spaces. Never use tabs or mix tabs and spaces. 
 
 *Exception: When a line break occurs inside parentheses, align the wrapped line with the first character inside the parenthesis.*
 
 ### Spacing
-
-Place spaces around all binary operators (=, +, -, <-, etc.). 
+Place spaces around all binary operators (=, +, -, <-, etc.).
 
 *Exception: Spaces around ='s are optional when passing parameters in a function call.*
 
@@ -64,6 +63,7 @@ df_TabPrior <- table(df[df$days.from.opt < 0, "campaign.id"])
 total <- sum(x[, 1])
 total <- sum(x[1, ])
 ```
+
 **BAD:** 
 ```
 df_TabPrior <- table(df[df$days.from.opt<0, "campaign.id"])  # Needs spaces around '<'
@@ -185,8 +185,8 @@ Do not terminate your lines with semicolons or use semicolons to put more than o
 
 Unit tests should go in a separate file named "originalfilename_test.R".
 
-### Commenting Guidelines
 
+### Commenting Guidelines
 Comment your code. Entire commented lines should begin with "#" and one space.
 
 Short comments can be placed after code preceded by two spaces, "#", and then one space.
@@ -198,8 +198,9 @@ hist(df$pct.spent,
      xlab   = "Fraction of budget spent",
      ylab   = "Frequency (count of campaignids)")
 ```
-### Function Definitions and Calls
 
+
+### Function Definitions and Calls
 Function definitions should first list arguments without default values, followed by those with default values. 
 
 In both function definitions and function calls, multiple arguments per line are allowed; line breaks are only allowed between assignments.
@@ -257,15 +258,14 @@ Use a consistent style for TODOs throughout your code.
 TODO(username): Explicit description of action to be taken
 ```
 ### Attach
-
 The possibilities for creating errors when using "attach" are numerous. Avoid it.
 
-### Functions
 
+### Functions
 Errors should be raised using stop().
 
-### Objects and Methods
 
+### Objects and Methods
 The S language has two object systems, S3 and S4, both of which are available in R. S3 methods are more interactive and flexible, whereas S4 methods are more formal and rigorous. (For an illustration of the two systems, see Thomas Lumley's "Programmer's Niche: A Simple Class, in S3 and S4" in R News 4/1, 2004, pgs. 33 - 36:  http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf.)
 
 Use S3 objects and methods unless there is a strong reason to use S4 objects or methods. A primary justification for an S4 object would be to use objects directly in C++ code. A primary justification for an S4 generic/method would be to dispatch on two arguments.
