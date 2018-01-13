@@ -12,11 +12,11 @@
 ## Notation and Naming
 
 ### File Names
-File names should end in uppercase `.R`, delimeter '\_', lowercase notation and, of course, be meaningful.
+File names should end in uppercase `.R`, word delimeter `'_'`, lowercase notation and, of course, be meaningful.
  
-**GOOD:** predict\_ad\_revenue.R
+**GOOD:** `predict_ad_revenue.R`
 
-**BAD:** foo.R
+**BAD:** `foo.R`
 
 
 ### Identifiers
@@ -58,14 +58,14 @@ Place spaces around all binary operators (=, +, -, <-, etc.).
 Do not place a space before a comma, but always place one after a comma.
 
  **GOOD:** 
-```
+```R
 df_TabPrior <- table(df[df$days.from.opt < 0, "campaign.id"])
 total <- sum(x[, 1])
 total <- sum(x[1, ])
 ```
 
 **BAD:** 
-```
+```R
 df_TabPrior <- table(df[df$days.from.opt<0, "campaign.id"])  # Needs spaces around '<'
 df_TabPrior <- table(df[df$days.from.opt < 0,"campaign.id"])  # Needs a space after the comma
 df_TabPrior<- table(df[df$days.from.opt < 0, "campaign.id"])  # Needs a space before <-
@@ -76,15 +76,17 @@ total <- sum(x[ ,1])  # Needs a space after the comma, not before
 Place a space before left parenthesis, except in a function call.
 
 **GOOD:**
-```
+```R
 if (debug)
 ```
 **BAD:**
-```
+```R
 if(debug)
 ```
+
 Extra spacing (i.e., more than one space in a row) is okay if it improves alignment of equals signs or arrows (<-).
-```
+
+```R
 plot (x    = x.coord,
       y    = dataMat[, MakeColName(metric, ptiles[1], "roiOpt")],
       ylim = ylim,
@@ -97,12 +99,13 @@ Do not place spaces around code in parentheses or square brackets.
 *Exception: Always place a space after a comma.*
 
 **GOOD:**
-```
+```R
 if (debug)
 x[1, ]
 ```
+
 **BAD:**
-```
+```R
 if ( debug )  # No spaces around debug
 x[1,]  # Needs a space after the comma
 ```
@@ -111,7 +114,7 @@ x[1,]  # Needs a space after the comma
 An opening curly brace should never go on its own line; a closing curly brace should always go on its own line. You may omit curly braces when a block consists of a single statement; however, you must consistently either use or not use curly braces for single statement blocks.
 
 **GOOD:**
-```
+```R
 if (is.null(ylim)) {
   ylim <- c(0, 0.06)
 }
@@ -123,7 +126,7 @@ if (is.null(ylim))
 Always begin the body of a block on a new line.
 
 **BAD:**
-```
+```R
 if (is.null(ylim)) ylim <- c(0, 0.06)
 if (is.null(ylim)) {ylim <- c(0, 0.06)}
 ```
@@ -132,16 +135,16 @@ Surround "else" with braces.
 An "else" statement should always be surrounded on the same line by curly braces.
 
 **GOOD:**
-```
+```R
 if (condition) {
   one or more lines
 } else {
   one or more lines
 }
 ```
-**BAD:**
 
-```
+**BAD:**
+```R
 if (condition) {
   one or more lines
 }
@@ -149,16 +152,18 @@ else {
   one or more lines
 }
 ```
+
 **BAD:**
-```
+```R
 if (condition)
   one line
 else
   one line
 ```
-### Assignment
 
-Use <-, not =, for assignment.
+
+### Assignment
+Use `<-`, not `=`, for assignment.
 
 **GOOD:**
 ```
@@ -168,14 +173,15 @@ x <- 5
 ```
 x = 5
 ```
-### Semicolons
 
+
+### Semicolons
 Do not terminate your lines with semicolons or use semicolons to put more than one command on the same line. (Semicolons are not necessary, and are omitted for consistency with other Google style guides.)
+
 
 ## Organization
 
 ### General Layout and Ordering
-
 1.Copyright statement comment
 2.Author comment
 3.File description comment, including purpose of program, inputs, and outputs
@@ -190,7 +196,7 @@ Unit tests should go in a separate file named "originalfilename_test.R".
 Comment your code. Entire commented lines should begin with "#" and one space.
 
 Short comments can be placed after code preceded by two spaces, "#", and then one space.
-```
+```R
 \# Create histogram of frequency of campaigns by pct budget spent.
 hist(df$pct.spent,
      breaks = "scott",  # method for choosing number of buckets
@@ -206,24 +212,24 @@ Function definitions should first list arguments without default values, followe
 In both function definitions and function calls, multiple arguments per line are allowed; line breaks are only allowed between assignments.
 
 **GOOD:**
-```
+```R
 PredictCTR <- function(query, property, numDays,
                        showPlot = TRUE)
 ```
 **BAD:**
-```
+```R
 PredictCTR <- function(query, property, numDays, showPlot =
                        TRUE)
 ```
 Ideally, unit tests should serve as sample function calls (for shared library routines).
 
-### Function Documentation
 
+### Function Documentation
 Functions should contain a comments section immediately below the function definition line. These comments should consist of a one-sentence description of the function; a list of the function's arguments, denoted by Args:, with a description of each (including the data type); and a description of the return value, denoted by Returns:. The comments should be descriptive enough that a caller can use the function without reading any of the function's code.
 
 Example Function
 
-```
+```R
 CalculateSampleCovariance <- function(x, y, verbose = TRUE) {
   # Computes the sample covariance between two vectors.
   #
@@ -252,11 +258,12 @@ CalculateSampleCovariance <- function(x, y, verbose = TRUE) {
 ```
 
 ### TODO Style
-
 Use a consistent style for TODOs throughout your code.
-```
+```R
 TODO(username): Explicit description of action to be taken
 ```
+
+
 ### Attach
 The possibilities for creating errors when using "attach" are numerous. Avoid it.
 
