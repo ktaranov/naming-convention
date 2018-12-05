@@ -1,7 +1,7 @@
 # C# Coding Standards and Naming Conventions
 
 
-| SQL Server Object Name    | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask          | Underscores |
+| Object Name               | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask          | Underscores |
 |:--------------------------|:-----------|-------:|:-------|:-------|:-------|:-------------|:-------------------|:------------|
 | Class name                | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Constructor name          | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
