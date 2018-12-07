@@ -81,12 +81,13 @@ SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
    SELECT FirstName
          , LastName
    ```
- - Keywords and data types declaration should be in **UPPERCASE**
- - `FROM, WHERE, INTO, JOIN, GROUP BY, ORDER BY` expressions should be aligned so, that all their arguments are placed under each other
- - All objects must used with schema names but without database and server name: `FROM dbo.Table`
- - All system database and tables must be in lower case for properly working in Case Sensitive instance
+ - Use `TOP` function with brackets because `TOP` has supports use of an expression, such as `(@Rows*2)`, or a subquery: `SELECT TOP(100) LastName …`. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoiding-old-style-top-clause). Also `TOP` without brackets does not work with `UPDATE` and `DELETE` statements.
  - For demo queries use TOP(100) or lower value because SQL Server SQL Server uses one sorting method for TOP 1-100 rows, and a different one for 101+ rows
    More details [here](https://www.brentozar.com/archive/2017/09/much-can-one-row-change-query-plan-part-2/)
+ - Keywords and data types declaration should be in **UPPERCASE**
+ - `FROM, WHERE, INTO, JOIN, GROUP BY, ORDER BY` expressions should be aligned so, that all their arguments are placed under each other (see Example below)
+ - All objects must used with schema names but without database and server name: `FROM dbo.Table`
+ - All system database and tables must be in lower case for properly working in Case Sensitive instance
 
 Example:
 
