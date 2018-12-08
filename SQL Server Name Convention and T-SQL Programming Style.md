@@ -74,14 +74,33 @@ SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
  - All finished expressions should have `;` at the end (this is ANSI standard and Microsoft announced with the SQL Server 2008 release that semicolon statement terminators will become mandatory in a future version so statement terminators other than semicolons (whitespace) are currently deprecated.  This deprecation announcement means that you should always use semicolon terminators in new development.)
    More details [here](http://www.dbdelta.com/always-use-semicolon-statement-terminators/)
  - All script files should end with `GO` and line break
- - The first argument in SELECT expression should be on the same line with it: `SELECT LastName`
+ - Avoid non-standard column aliases, use ,if required, double-quotes and always `AS` keyword: `SELECT p.LastName AS "Last Name" FROM dbo.Person AS p`
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-non-standard-column-aliases)
+   All possible ways using of aliases in SQL Server:
+
+   ```sql
+    SELECT Tables   = Schema_Name(schema_id)+'.'+[name]  FROM sys.tables;
+    SELECT "Tables" = Schema_Name(schema_id)+'.'+[name]  FROM sys.tables;
+    SELECT [Tables] = Schema_Name(schema_id)+'.'+[name]  FROM sys.tables;
+    SELECT 'Tables' = Schema_Name(schema_id)+'.'+[name]  FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] [Tables]    FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] 'Tables'    FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] "Tables"    FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] Tables      FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] AS [Tables] FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] AS 'Tables' FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] AS "Tables" FROM sys.tables;
+    SELECT Schema_Name(schema_id)+'.'+[name] AS Tables   FROM sys.tables;
+   ```
+ - The first argument in `SELECT` expression should be on the same line with it: `SELECT LastName …`
  - Arguments are divided by line breaks, commas should be placed before an argument:
    
    ```sql
    SELECT FirstName
          , LastName
    ```
- - Use `TOP` function with brackets because `TOP` has supports use of an expression, such as `(@Rows*2)`, or a subquery: `SELECT TOP(100) LastName …`. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoiding-old-style-top-clause). Also `TOP` without brackets does not work with `UPDATE` and `DELETE` statements.
+ - Use `TOP` function with brackets because `TOP` has supports use of an expression, such as `(@Rows*2)`, or a subquery: `SELECT TOP(100) LastName …`.
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoiding-old-style-top-clause). Also `TOP` without brackets does not work with `UPDATE` and `DELETE` statements.
  - For demo queries use TOP(100) or lower value because SQL Server SQL Server uses one sorting method for TOP 1-100 rows, and a different one for 101+ rows
    More details [here](https://www.brentozar.com/archive/2017/09/much-can-one-row-change-query-plan-part-2/)
  - Keywords and data types declaration should be in **UPPERCASE**
