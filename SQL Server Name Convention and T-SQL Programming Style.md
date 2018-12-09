@@ -106,7 +106,23 @@ SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
  - Keywords and data types declaration should be in **UPPERCASE**
  - `FROM, WHERE, INTO, JOIN, GROUP BY, ORDER BY` expressions should be aligned so, that all their arguments are placed under each other (see Example below)
  - All objects must used with schema names but without database and server name: `FROM dbo.Table`
- - All system database and tables must be in lower case for properly working in Case Sensitive instance
+ - All system database and tables must be in lower case for properly working in Case Sensitive instance: `master, sys.tables…`
+ - Avoid using [`ISNUMERIC`](https://docs.microsoft.com/en-us/sql/t-sql/functions/isnumeric-transact-sql) function. Use for SQL Server >= 2012 [`TRY_CONVERT`](https://docs.microsoft.com/en-us/sql/t-sql/functions/try-convert-transact-sql) function and for SQL Server < 2012 `LIKE` expression:
+   ```sql
+   CASE WHEN Stuff(LTrim(TapAngle),1,1,'') NOT LIKE '%[^-+.ED0123456789]%' --is it a float?
+              AND Left(LTrim(TapAngle),1) LIKE '[-.+0123456789]' 
+                 AND TapAngle LIKE '%[0123456789][ED][-+0123456789]%' 
+                 AND Right(TapAngle ,1) LIKE N'[0123456789]'
+               THEN 'float' 
+         WHEN Stuff(LTrim(TapAngle),1,1,'') NOT LIKE '%[^.0123456789]%' --is it numeric
+              AND Left(LTrim(TapAngle),1) LIKE '[-.+0123456789]' 
+              AND TapAngle LIKE '%.%' AND TapAngle NOT LIKE '%.%.%' 
+              AND TapAngle LIKE '%[0123456789]%'
+             THEN 'float'
+   ELSE NULL
+   END
+   ```
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-using-isnumeric-function-e1029)
 
 Example:
 
