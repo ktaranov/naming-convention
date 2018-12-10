@@ -123,6 +123,8 @@ SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
    END
    ```
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-using-isnumeric-function-e1029)
+ - Avoid using `INSERT INTO` a permanent table with `ORDER BY`, more details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-insert-permanent-table-order-pe020)
+ - Avoid using shorthand (`wk, yyyy, d` etc.) with date/time operations, use full names: `month, day, year`. More details [here](https://sqlblog.org/2011/09/20/bad-habits-to-kick-using-shorthand-with-date-time-operations)
 
 Example:
 
