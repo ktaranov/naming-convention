@@ -23,9 +23,14 @@
  - [Oracle DB documentation][10]
  - [MySQL documentation][11]
 
-## Program Languages
+## Different Languages Style Guides
  - C# Language ([C# Programming Guide])
- - JavaScript ([Standard ECMA-262] | [Microsoft JavaScript Language Reference] | [Mozilla Javascript Manual])
+ - JavaScript
+    - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+    - [Standard ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
+    - [Microsoft TypeScript Coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+    - [Mozilla Javascript Manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+ - [Sensible CSS Guidelines](https://github.com/chris-pearce/css-guidelines)
  - R Language ([R Language Definition])
  - Transact-SQL ([T-SQL Reference])
  - Procedural Language/PostGres Structured Query Language ([PL/pgSQL Manual])
@@ -34,10 +39,11 @@
 ## R Language
  - [Google's R Style Guide][3]
  - [Google's tweak guide]
- - [Stackoverflow R discussion]
- - [Bioconductor’s R coding standards]
- - [Colin Gillespie’s R style guide]
- - [Hadley Wickham’s R style guide]
+ - [Stackoverflow R discussion](http://stackoverflow.com/questions/10013545/are-there-any-official-naming-conventions-for-r)
+ - [Bioconductor R coding standards](http://bioconductor.org/developers/how-to/coding-style/)
+ - [Bioconductor R Package Guidelines](http://bioconductor.org/developers/package-guidelines/)
+ - [Colin Gillespie’s R style guide](http://csgillespie.wordpress.com/2010/11/23/r-style-guide/)
+ - [Hadley Wickham’s R style guide](http://stat405.had.co.nz/r-style.html)
 
 [1]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
 [2]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines
@@ -52,16 +58,9 @@
 [10]:https://docs.oracle.com/en/database/database.html
 [11]:http://docs.oracle.com/cd/E17952_01/index.html
 
-[Standard ECMA-262]:http://www.ecma-international.org/publications/standards/Ecma-262.htm
-[Microsoft JavaScript Language Reference]:http://msdn.microsoft.com/en-us/library/ie/d1et7k7c%28v=vs.94%29.aspx
-[Mozilla Javascript Manual]:https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [C# Programming Guide]:http://msdn.microsoft.com/ru-ru/library/67ef8sbd.aspx
 [R Language Definition]:http://cran.r-project.org/doc/manuals/R-lang.html
 [T-SQL Reference]:https://docs.microsoft.com/en-us/sql/t-sql/language-reference
 [PL/pgSQL Manual]:https://www.postgresql.org/docs/manuals/
 
 [Google's tweak guide]:http://r-pkgs.had.co.nz/style.html
-[Stackoverflow discussion]:http://stackoverflow.com/questions/10013545/are-there-any-official-naming-conventions-for-r
-[Bioconductor’s coding standards]:http://wiki.fhcrc.org/bioc/Coding_
-[Colin Gillespie’s R style guide]:http://csgillespie.wordpress.com/2010/11/23/r-style-guide/
-[Hadley Wickham’s style guide]:http://stat405.had.co.nz/r-style.html
