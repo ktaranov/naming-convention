@@ -6,59 +6,60 @@
  - [R style guide and name convention](R%20style%20uide%20and%20name%20convention.md)
  - [SQL Server Name Convention and T-SQL Programming Style](SQL%20Server%20Name%20Convention%20and%20T-SQL%20Programming%20Style.md)
 
-## Usefull links for name conventions
- - [NET Naming Guidelines]
- - [Framework Design Guidelines]
- - [Google's R Style Guide]
- - [Google Python Style Guide]
- - [MSDN Powershell Style Guide]
- - [MSDN Approved Verbs for Windows PowerShellCommands]
+## Useful links for name conventions
+ - [NET Naming Guidelines][1]
+ - [Framework Design Guidelines][2]
+ - [Google's R Style Guide][3]
+ - [Google Python Style Guide][4]
+ - [MSDN Powershell Style Guide][5]
+ - [MSDN Approved Verbs for Windows PowerShellCommands][6]
+ - [The PowerShell Best Practices and Style Guide](https://github.com/PoshCode/PowerShellPracticeAndStyle)
+ - [PostgreSQL naming conventions](https://stackoverflow.com/q/2878248/2298061)
 
-## Relation Database
- - SQL Server ([SQL Server 2012 Documentation])
- - SQLite ([SQLite Documentation])
- - PostgreSQL ([PostgreSQL Manual])
- - Oracle Database ([Oracle DB documentation])
- - MySQL ([MySQL documentation])
+## Relation Database Documentation
+ - [SQL Server Documentation][7]
+ - [SQLite Documentation][8]
+ - [PostgreSQL Manual][9]
+ - [Oracle DB documentation][10]
+ - [MySQL documentation][11]
 
-## Programm Language
+## Program Languages
  - C# Language ([C# Programming Guide])
  - JavaScript ([Standard ECMA-262] | [Microsoft JavaScript Language Reference] | [Mozilla Javascript Manual])
  - R Language ([R Language Definition])
  - Transact-SQL ([T-SQL Reference])
  - Procedural Language/PostGres Structured Query Language ([PL/pgSQL Manual])
- - Python
+ - [Python PEP](https://www.python.org/dev/peps/pep-0008/)
 
 ## R Language
- - [Google's R Style Guide]
+ - [Google's R Style Guide][3]
  - [Google's tweak guide]
- - [Stackoverflow discussion]
- - [Bioconductor’s coding standards]
+ - [Stackoverflow R discussion]
+ - [Bioconductor’s R coding standards]
  - [Colin Gillespie’s R style guide]
- - [Hadley Wickham’s style guide]
+ - [Hadley Wickham’s R style guide]
 
-[NET Naming Guidelines]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
-[Framework Design Guidelines]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index
-[Google's R Style Guide]:http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
-[Google Python Style Guide]:https://google-styleguide.googlecode.com/svn/trunk/pyguide.html
-[MSDN Powershell Style Guide]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
-[MSDN Approved Verbs for Windows PowerShellCommands]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
+[1]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
+[2]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines
+[3]:http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
+[4]:https://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+[5]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
+[6]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
 
-[SQL Server 2012 Documentation]:http://technet.microsoft.com/library/bb418433%28v=sql.10%29.aspx
-[SQLite Documentation]:https://www.sqlite.org/docs.html
-[PostgreSQL Manual]:http://www.postgresql.org/docs/current/static/
-[Oracle DB documentation]:https://docs.oracle.com/en/database/database.html
-[MySQL documentation]:http://docs.oracle.com/cd/E17952_01/index.html
+[7]:https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation
+[8]:https://www.sqlite.org/docs.html
+[9]:http://www.postgresql.org/docs/current/static/
+[10]:https://docs.oracle.com/en/database/database.html
+[11]:http://docs.oracle.com/cd/E17952_01/index.html
 
 [Standard ECMA-262]:http://www.ecma-international.org/publications/standards/Ecma-262.htm
 [Microsoft JavaScript Language Reference]:http://msdn.microsoft.com/en-us/library/ie/d1et7k7c%28v=vs.94%29.aspx
 [Mozilla Javascript Manual]:https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [C# Programming Guide]:http://msdn.microsoft.com/ru-ru/library/67ef8sbd.aspx
 [R Language Definition]:http://cran.r-project.org/doc/manuals/R-lang.html
-[T-SQL Reference]:http://technet.microsoft.com/en-gb/library/ms189826%28v=sql.90%29.aspx
-[PL/pgSQL Manual]:http://www.postgresql.org/docs/9.3/static/plpgsql.html
+[T-SQL Reference]:https://docs.microsoft.com/en-us/sql/t-sql/language-reference
+[PL/pgSQL Manual]:https://www.postgresql.org/docs/manuals/
 
-[Google's R Style Guide]:http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 [Google's tweak guide]:http://r-pkgs.had.co.nz/style.html
 [Stackoverflow discussion]:http://stackoverflow.com/questions/10013545/are-there-any-official-naming-conventions-for-r
 [Bioconductor’s coding standards]:http://wiki.fhcrc.org/bioc/Coding_
