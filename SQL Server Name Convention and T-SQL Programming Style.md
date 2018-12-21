@@ -34,7 +34,7 @@ Official Reference and useful links
 |----------------------------------|------| ---------- |-------:|--------|--------|--------|--------------|--------------|------------------------------------|
 | Database                         |      | UPPERCASE  |     30 | No     | No     | No     | Yes          | [A-z]        | MYDATABASE                         |
 | Database Trigger                 |      | PascalCase |     50 | No     | DTR_   | No     | Yes          | [A-z]        | DTR_CheckLogin                     |
-| Schema                           |      | lowercase  |     30 | No     | No     | No     | Yes          | [A-z][0-9]   | myschema                           |
+| Schema                           |      | lowercase  |     30 | No     | No     | No     | Yes          | [a-z][0-9]   | myschema                           |
 | File Table                       |      | PascalCase |    128 | No     | FT_    | No     | Yes          | [A-z][0-9]   | FT_MyTable                         |
 | Global Temporary Table           |      | PascalCase |    117 | No     | No     | No     | Yes          | ##[A-z][0-9] | ##MyTable                          |
 | Local Temporary Table            |      | PascalCase |    116 | No     | No     | No     | Yes          | #[A-z][0-9]  | #MyTable                           |
