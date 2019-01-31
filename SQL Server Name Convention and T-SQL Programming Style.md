@@ -3,6 +3,7 @@
 
 ## Table of Contents
  - [SQL Server Object Name Convention](#sql-server-object-name-convention)
+ - [SQL Server Data Types Recommendation](#data-types-recommendation)
  - [T-SQL Programming Style](#t-sql-programming-style)
    - [General programming style](#general-programming-style)
    - [Stored procedures and functions programming style](#programming-style)
@@ -44,18 +45,98 @@
 | CLR  User-Defined Types          |      | PascalCase |    128 | No     | ct_    | No     | No           | [A-z][0-9]   | ct_CAName_LogicalName              |
 | CLR  Triggers                    |      | PascalCase |    128 | No     | ctr_   | No     | No           | [A-z][0-9]   | ctr_CAName_LogicalName             |
 
+**[⬆ back to top](#table-of-contents)**
+
+
+<a id="data-types-recommendation"></a>
+## SQL Server Data Types Recommendation
+More details about SQL Server data types and mapping it with another databases you can find [here](https://github.com/ktaranov/sqlserver-kit/blob/master/SQL%20Server%20Data%20Types.md)
+
+| General Type         | Type                | Recommended    | What use instead   | Why use or not                                            |
+|----------------------|---------------------|----------------|--------------------|-----------------------------------------------------------|
+| Exact Numerics       | [bit]               | Maybe          | [tinyint][1]       |                                                           |
+| Exact Numerics       | [tinyint][1]        | Maybe          | [int][1]           |                                                           |
+| Exact Numerics       | [smallint][1]       | Maybe          | [int][1]           |                                                           |
+| Exact Numerics       | [int][1]            | Yes            | -                  |                                                           |
+| Exact Numerics       | [bigint][1]         | Yes            | [int][1]           |                                                           |
+| Exact Numerics       | [decimal][2]        | Yes            | -                  |                                                           |
+| Exact Numerics       | [smallmoney][3]     | No             | [decimal][2]       | [possibility to loss precision due to rounding errors][9] |
+| Exact Numerics       | [money][3]          | No             | [decimal][2]       | [possibility to loss precision due to rounding errors][9] |
+| Approximate Numerics | [real][4]           | Yes            | -                  |                                                           |
+| Approximate Numerics | [float][4]          | Yes            | -                  |                                                           |
+| Date and Time        | [date]              | Yes            | -                  |                                                           |
+| Date and Time        | [smalldatetime]     | Maybe          | [date]             |                                                           |
+| Date and Time        | [time]              | Yes            | -                  |                                                           |
+| Date and Time        | [datetime2]         | Yes            | -                  |                                                           |
+| Date and Time        | [datetime]          | No             | [datetime2]        |                                                           |
+| Date and time        | [datetimeoffset]    | Yes            | -                  |                                                           |
+| Character Strings    | [char][5]           | Maybe          |                    |                                                           |
+| Character Strings    | [varchar][5]        | Yes            | [varchar][5]       |                                                           |
+| Character Strings    | [varchar(max)][5]   | Yes            | -                  |                                                           |
+| Character Strings    | [nchar][6]          | Maybe          | [nvarchar][6]      |                                                           |
+| Character Strings    | [nvarchar][6]       | Yes            | -                  |                                                           |
+| Character Strings    | [nvarchar(max)][6]  | Yes            | -                  |                                                           |
+| Character Strings    | [ntext][7]          | **Deprecated** | [nvarchar(max)][6] |                                                           |
+| Character Strings    | [text][7]           | **Deprecated** | [nvarchar(max)][6] |                                                           |
+| Binary Strings       | [image][7]          | **Deprecated** | [nvarchar(max)][6] |                                                           |
+| Binary Strings       | [binary][8]         | **Deprecated** | [nvarchar(max)][6] |                                                           |
+| Binary Strings       | [varbinary][8]      | Yes            | -                  |                                                           |
+| Binary Strings       | [varbinary(max)][8] | Yes            | -                  |                                                           |
+| Other Data Types     | [cursor]            | Maybe          | -                  |                                                           |
+| Other Data Types     | [sql_variant]       | No             | [varchar][5]?      |                                                           |
+| Other Data Types     | [hierarchyid]       | Maybe          | -                  |                                                           |
+| Other Data Types     | [rowversion]        | Maybe          | -                  |                                                           |
+| Other Data Types     | [timestamp]         | **Deprecated** | [rowversion]       | it is just synonym to [rowversion] data type              |
+| Other Data Types     | [uniqueidentifier]  | Yes            | -                  |                                                           |
+| Other Data Types     | [xml]               | Yes            | -                  |                                                           |
+| Other Data Types     | [table]             | Maybe          | -                  |                                                           |
+| Spatial Data Types   | [geometry]          | Yes            | -                  |                                                           |
+| Spatial Data Types   | [geography]         | Yes            | -                  |                                                           |
+
+[1]:https://docs.microsoft.com/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql
+[2]:https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[3]:https://docs.microsoft.com/sql/t-sql/data-types/money-and-smallmoney-transact-sql
+[4]:https://docs.microsoft.com/sql/t-sql/data-types/float-and-real-transact-sql
+[5]:https://docs.microsoft.com/sql/t-sql/data-types/char-and-varchar-transact-sql
+[6]:https://docs.microsoft.com/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[7]:https://docs.microsoft.com/sql/t-sql/data-types/ntext-text-and-image-transact-sql
+[8]:https://docs.microsoft.com/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+
+[9]:https://www.red-gate.com/hub/product-learning/sql-prompt/avoid-use-money-smallmoney-datatypes
+
+[bit]:https://docs.microsoft.com/sql/t-sql/data-types/bit-transact-sql
+[date]:https://docs.microsoft.com/sql/t-sql/data-types/date-transact-sql
+[smalldatetime]:https://docs.microsoft.com/sql/t-sql/data-types/smalldatetime-transact-sql
+[time]:https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql
+[datetime2]:https://docs.microsoft.com/sql/t-sql/data-types/datetime2-transact-sql
+[datetime]:https://docs.microsoft.com/sql/t-sql/data-types/datetime-transact-sql
+[datetimeoffset]:https://docs.microsoft.com/sql/t-sql/data-types/datetimeoffset-transact-sql
+[cursor]:https://docs.microsoft.com/sql/t-sql/data-types/cursor-transact-sql
+[sql_variant]:https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql
+[hierarchyid]:https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference
+[rowversion]:https://docs.microsoft.com/sql/t-sql/data-types/rowversion-transact-sql
+[timestamp]:https://docs.microsoft.com/sql/t-sql/data-types/rowversion-transact-sql#remarks
+[uniqueidentifier]:https://docs.microsoft.com/sql/t-sql/data-types/uniqueidentifier-transact-sql
+[xml]:https://docs.microsoft.com/sql/t-sql/xml/xml-transact-sql
+[table]:https://docs.microsoft.com/sql/t-sql/data-types/table-transact-sql
+[geometry]:https://docs.microsoft.com/sql/t-sql/spatial-geometry/spatial-types-geometry-transact-sql
+[geography]:https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography
+
+**[⬆ back to top](#table-of-contents)**
+
 
 ## T-SQL Programming Style
 SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
 
 ### General programming style
  - Delimiters: spaces (not tabs)
- - No square brackets [] and reserved words in object names and alias, use only Latin symbols **[A-z]** and numeric **[0-9]**
+ - Avoid using asterisk in select statements `SELECT *`, use explicit column names. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-asterisk-select-list)
+ - No square brackets `[]` and [reserved words](https://github.com/ktaranov/sqlserver-kit/blob/master/Scripts/Check_Reserved_Words_For_Object_Names.sql) in object names and alias, use only Latin symbols **`[A-z]`** and numeric **`[0-9]`**
  - Prefer [ANSI syntax](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip) and functions
  - All finished expressions should have `;` at the end (this is ANSI standard and Microsoft announced with the SQL Server 2008 release that semicolon statement terminators will become mandatory in a future version so statement terminators other than semicolons (whitespace) are currently deprecated.  This deprecation announcement means that you should always use semicolon terminators in new development.)
    More details [here](http://www.dbdelta.com/always-use-semicolon-statement-terminators/)
  - All script files should end with `GO` and line break
- - Avoid non-standard column aliases, use ,if required, double-quotes and always `AS` keyword: `SELECT p.LastName AS "Last Name" FROM dbo.Person AS p`
+ - Avoid non-standard column aliases, use ,if required, double-quotes and always `AS` keyword: `SELECT p.LastName AS "Last Name" FROM dbo.Person AS p;`
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-non-standard-column-aliases).
    All possible ways using aliases in SQL Server:
 
@@ -70,34 +151,36 @@ SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
     SELECT Schema_Name(schema_id)+'.'+[name] Tables      FROM sys.tables;
     SELECT Schema_Name(schema_id)+'.'+[name] AS [Tables] FROM sys.tables;
     SELECT Schema_Name(schema_id)+'.'+[name] AS 'Tables' FROM sys.tables;
-    SELECT Schema_Name(schema_id)+'.'+[name] AS "Tables" FROM sys.tables;
     SELECT Schema_Name(schema_id)+'.'+[name] AS Tables   FROM sys.tables;
+    /* Below recommended due to ANSI
+    SELECT Schema_Name(schema_id)+'.'+[name] AS "Tables" FROM sys.tables;
    ```
  - The first argument in `SELECT` expression should be on the same line with it: `SELECT LastName …`
  - Arguments are divided by line breaks, commas should be placed before an argument:
    
    ```sql
    SELECT FirstName
-         , LastName
+        , LastName
    ```
+ - For SQL Server >= 2012 use `FETCH-OFFSET` instead `TOP`. But if you use `TOP` avoid use `TOP` in a `SELECT` statement without an `ORDER BY`. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-top-without-order-select-statement)
  - Use `TOP` function with brackets because `TOP` has supports use of an expression, such as `(@Rows*2)`, or a subquery: `SELECT TOP(100) LastName …`.
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoiding-old-style-top-clause). Also `TOP` without brackets does not work with `UPDATE` and `DELETE` statements.
- - For demo queries use TOP(100) or lower value because SQL Server SQL Server uses one sorting method for TOP 1-100 rows, and a different one for 101+ rows
+ - For demo queries use `TOP(100)` or lower value because SQL Server SQL Server uses one sorting method for TOP 1-100 rows, and a different one for 101+ rows
    More details [here](https://www.brentozar.com/archive/2017/09/much-can-one-row-change-query-plan-part-2/)
  - Keywords and data types declaration should be in **UPPERCASE**
  - `FROM, WHERE, INTO, JOIN, GROUP BY, ORDER BY` expressions should be aligned so, that all their arguments are placed under each other (see Example below)
  - All objects must used with schema names but without database and server name: `FROM dbo.Table`. For stored procedure more details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-procedures-lack-schema-qualification)
- - All system database and tables must be in lower case for properly working in Case Sensitive instance: `master, sys.tables…`
+ - All system database and tables must be in lower case for properly working in Case Sensitive instance: `master, sys.tables …`
  - Avoid using [`ISNUMERIC`](https://docs.microsoft.com/en-us/sql/t-sql/functions/isnumeric-transact-sql) function. Use for SQL Server >= 2012 [`TRY_CONVERT`](https://docs.microsoft.com/en-us/sql/t-sql/functions/try-convert-transact-sql) function and for SQL Server < 2012 `LIKE` expression:
    ```sql
    CASE WHEN Stuff(LTrim(TapAngle),1,1,'') NOT LIKE '%[^-+.ED0123456789]%' --is it a float?
-              AND Left(LTrim(TapAngle),1) LIKE '[-.+0123456789]' 
-                 AND TapAngle LIKE '%[0123456789][ED][-+0123456789]%' 
+              AND Left(LTrim(TapAngle),1) LIKE '[-.+0123456789]'
+                 AND TapAngle LIKE '%[0123456789][ED][-+0123456789]%'
                  AND Right(TapAngle ,1) LIKE N'[0123456789]'
-               THEN 'float' 
+               THEN 'float'
          WHEN Stuff(LTrim(TapAngle),1,1,'') NOT LIKE '%[^.0123456789]%' --is it numeric
-              AND Left(LTrim(TapAngle),1) LIKE '[-.+0123456789]' 
-              AND TapAngle LIKE '%.%' AND TapAngle NOT LIKE '%.%.%' 
+              AND Left(LTrim(TapAngle),1) LIKE '[-.+0123456789]'
+              AND TapAngle LIKE '%.%' AND TapAngle NOT LIKE '%.%.%'
               AND TapAngle LIKE '%[0123456789]%'
              THEN 'float'
    ELSE NULL
@@ -106,7 +189,24 @@ SQL Server TSQL Coding Conventions, Best Practices, and Programming Guidelines
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-using-isnumeric-function-e1029)
  - Avoid using `INSERT INTO` a permanent table with `ORDER BY`, more details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-insert-permanent-table-order-pe020)
  - Avoid using shorthand (`wk, yyyy, d` etc.) with date/time operations, use full names: `month, day, year`. More details [here](https://sqlblog.org/2011/09/20/bad-habits-to-kick-using-shorthand-with-date-time-operations)
- - https://sqlblog.org/2009/10/16/bad-habits-to-kick-mis-handling-date-range-queries
+ - Avoid ambiguous formats for date-only literals, use `CAST('yyyymmdd' AS DATE)` format
+ - Avoid treating dates like strings and avoid calculations on the left-hand side of the `WHERE` clause. More details [here](https://sqlblog.org/2009/10/16/bad-habits-to-kick-mis-handling-date-range-queries)
+ - Avoid using [hints](https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql) except `OPTION(RECOMPILE)` if needed. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-a-hint-is-used-pe004-7)
+ - Avoid use of `SELECT…INTO` for production code, use instead `CREATE TABLE` + `INSERT INTO …` approach. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/use-selectinto-statement)
+ - Use only ISO standard JOINS syntaxes. The “old style” Microsoft/Sybase JOIN style for SQL, which uses the `=*` and `*= syntax, has been deprecated and is no longer used. Queries that use this syntax will fail when the database engine level is 10 (SQL Server 2008) or later (compatibility level 100). The ANSI-89 table citation list (FROM tableA, tableB) is still ISO standard for INNER JOINs only. Neither of these styles are worth using. It is always better to specify the type of join you require, INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER and CROSS, which has been standard since ANSI SQL-92 was published. While you can choose any supported JOIN style, without affecting the query plan used by SQL Server, using the ANSI-standard syntax will make your code easier to understand, more consistent, and portable to other relational database systems.
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-old-style-join-syntax-st001)
+ - Do not use a scalar user-defined function (UDF) in a `JOIN` condition, `WHERE` search condition, or in a `SELECT` list, unless the function is [schema-bound](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-function-transact-sql#best-practices).
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/misuse-scalar-user-defined-function-constant-pe017)
+ - Use `EXISTS` or `NOT EXISTS` if referencing a subquery, and `IN` or `NOT IN` when have a list of literal values
+   More details [here](https://www.brentozar.com/archive/2018/08/a-common-query-error/)
+ - For concatenate strings:
+   - always using the upper-case `N`;
+   - always store into a variable of type `NVARCHAR(MAX)`;
+   - avoid truncation of string literals, simply ensure that one piece is converted to `NVARCHAR(MAX)`.
+   Example: `SET @NVCmaxVariable = CONVERT(NVARCHAR(MAX), N'anything') + N'something else' + N'another';`
+   More details [here](https://themondaymorningdba.wordpress.com/2018/09/13/them-concatenatin-blues/)
+ - Always specify a length to any text-based data type such as `NVARCHAR` or `VARCHAR`: `DECLARE @myGoodVariable VARCHAR(50);` and not `DECLARE @myBadVariable VARCHAR;`.
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/using-a-variable-length-datatype-without-explicit-length-the-whys-and-wherefores)
 
 Example:
 
@@ -128,6 +228,8 @@ SELECT t1.Value1 AS Val1
  ORDER BY t2.Value2;
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 <a id="programming-style"></a>
 ### Stored procedures and functions programming style
 
@@ -136,13 +238,14 @@ SELECT t1.Value1 AS Val1
  - Parameters name should be in **camelCase**
  - Parameters should be placed under procedure name divided by line breaks
  - After the `ALTER` statement and before AS keyword should be placed a comment with execution example
- - The procedure or function should begin with parameter check
+ - The procedure or function should begin with parameters check
  - Create `sp_` procedures only in `master` database - SQL Server will always scan through the system catalog first
  - Always use `BEGIN TRY` and `BEGIN CATCH`
- - Always use `/* */` instead inline comment `--`
+ - Always use `/* */` instead in-line comment `--`
  - Use `SET NOCOUNT ON;` for stops the message that shows the count of the number of rows affected by a Transact-SQL statement. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-set-nocount-problem-pe008-pe009)
  - Do not use `SET NOCOUNT OFF;` (because it is default behavior)
- - Use TOP expression with `()`:
+ - Use `RAISERROR` instead `PRINT` if you want to give feedback about the state of the currently executing SQL batch without lags. More details [here](http://sqlity.net/en/984/print-vs-raiserror/) and [here](http://sqlservercode.blogspot.com/2019/01/print-disruptor-of-batch-deletes-in-sql.html)
+ - Use `TOP` expression with `()`:
 ```tsql
 -- Not working without ()
 DECLARE @n int = 1;
@@ -167,6 +270,8 @@ example:
 returns:   >
  single row, single column result Build_Script.
 ```
+
+**[⬆ back to top](#table-of-contents)**
 
 Stored Procedure Example:
 
