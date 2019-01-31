@@ -25,18 +25,18 @@
 
 
 ## Tags usage examples
-1. [STYLE]  Измение размера тэга h1
-2. [CLEANUP] Небольшое форматирование кода
-3. [BUGFIX] При изменении модели ApplicationUser, не происходит автоматическое удаление базы и создание ее с новой структурой
-4. [FEATURE] Добавлен универсальный объект для создания графиков
-5. (!!!)[FEATURE] Исправлен класс ChartItem
-6. (!!!)(DB)[FEATURE] Добавлен целочисленный ApplicationUserID
+1. [STYLE] Change size of tag h1
+2. [CLEANUP] Few code formating
+3. [BUGFIX] Fix bugs 101 and 110
+4. [FEATURE] Add new universal system class object
+5. (!!!)[FEATURE] Added new class ChartItem
+6. (!!!)(DB)[FEATURE] Add new column ApplicationUserID
+
 
 ## Commit Message Example
-(!!!)(DB)[FEATURE]Возврат к строковым идентификаторам в таблицах для авторизации пользователей
+(!!!)(DB)[FEATURE] Rewrite stored procedure
 
-Поскольку не все встроенные в Microsoft Identity Owin 2.0 методы поддерживают
-использование целочисленных значений в ID, тип данных для этого поля был сменен на string.
+Additional information about commit changes
 
 
 ## Source
@@ -44,3 +44,11 @@
 - [Karma-Runner Git Commit Msg](http://karma-runner.github.io/0.8/dev/git-commit-msg.html)
 - [Wiki.Typo3.Org CommitMessage Format](http://wiki.typo3.org/CommitMessage_Format_(Git))
 - [How to Write a Git Commit Message ](http://www.chrisbeams.com/posts/git-commit/)
+
+
+## Usefull links
+ - [Better Code Reviews with GIT](https://www.red-gate.com/simple-talk/dotnet/software-delivery/better-code-reviews-with-git/)
+ - [Part 1: Pre-Review Comments](https://www.red-gate.com/simple-talk/dotnet/.net-framework/the-zen-of-code-reviews-pre-review-comments/)
+ - [Part 2: Best Practices](https://www.red-gate.com/simple-talk/dotnet/.net-framework/the-zen-of-code-reviews-best-practices/)
+ - [Part 3: The Reviewer’s Tale](https://www.red-gate.com/simple-talk/dotnet/.net-framework/the-zen-of-code-reviews-the-reviewer's-tale/)
+ - [Part 4: Review as if You Own the Code](https://www.red-gate.com/simple-talk/dotnet/.net-framework/the-zen-of-code-reviews-review-as-if-you-own-the-code/)
