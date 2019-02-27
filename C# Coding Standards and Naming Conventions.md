@@ -109,7 +109,7 @@ UIControl uiControl;
 
 ***Why: consistent with the Microsoft's .NET Framework. Caps would grap visually too much attention.***
 
-#### 8. Do not use Underscores in identifiers. Exception: you can prefix private static variables with an underscore:
+#### 8. Do not use Underscores in identifiers. Exception: you can prefix private fields with an underscore:
 
 ```csharp 
 // Correct
