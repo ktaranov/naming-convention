@@ -124,17 +124,21 @@ private DateTime _registrationDate;
 
 ***Why: consistent with the Microsoft's .NET Framework and makes code more natural to read (without 'slur'). Also avoids underline stress (inability to see underline).***
 
-#### 9. Do use predefined type names instead of system type names like Int16, Single, UInt64, etc.
+#### 9. Do use predefined type names (C# aliases) like `int`, `float`, `string` for local, parameter and member declarations. Do use .NET Framework names like `Int32`, `Single`, `String` when accessing the type's static members like `Int32.TryParse` or `String.Join`.
 
 ```csharp
 // Correct
 string firstName;
 int lastIndex;
 bool isSaved;
+string commaSeparatedNames = String.Join(", ", names);
+int index = Int32.Parse(input);
 // Avoid
 String firstName;
 Int32 lastIndex;
 Boolean isSaved;
+string commaSeparatedNames = string.Join(", ", names);
+int index = int.Parse(input);
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework and makes code more natural to read.*** 
