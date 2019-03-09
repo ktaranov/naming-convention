@@ -64,9 +64,9 @@ string strName;
 
 ```csharp
 // Correct
-public static const string ShippingType = "DropShip";    
+public const string ShippingType = "DropShip";
 // Avoid
-public static const string SHIPPINGTYPE = "DropShip";
+public const string SHIPPINGTYPE = "DropShip";
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework. Caps grap too much attention.***
