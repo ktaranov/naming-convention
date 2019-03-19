@@ -107,7 +107,7 @@ FtpTransfer ftpTransfer;
 UIControl uiControl;
 ```
 
-***Why: consistent with the Microsoft's .NET Framework. Caps would grap visually too much attention.***
+***Why: consistent with the Microsoft's .NET Framework. Caps would grab visually too much attention.***
 
 #### 8. Do not use Underscores in identifiers. Exception: you can prefix private fields with an underscore:
 
