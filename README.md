@@ -9,8 +9,20 @@
 ## Useful links for name conventions
  - [NET Naming Guidelines][1]
  - [Framework Design Guidelines][2]
- - [Google's R Style Guide][3]
- - [Google Python Style Guide][4]
+ - [Google style guides for open source projects](https://github.com/google/styleguide)
+   - [Google R Style Guide][3]
+   - [Google Python Style Guide][4]
+   - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+   - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
+   - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+   - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
+   - [Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml)
+   - [Google Common Lisp Style Guide](https://google.github.io/styleguide/lispguide.xml)
+   - [Google Objective-C Style Guide](https://github.com/google/styleguide/blob/gh-pages/objcguide.md)
+   - [Google Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+   - [Google Vimscript Guide](https://google.github.io/styleguide/vimscriptfull.xml)
+   - [Google XML Document Format Style Guide](https://google.github.io/styleguide/xmlstyle.html)
+   - [An AngularJS Style Guide for Closure Users at Google](https://google.github.io/styleguide/angularjs-google-style.html)  
  - [MSDN Powershell Style Guide][5]
  - [MSDN Approved Verbs for Windows PowerShellCommands][6]
  - [The PowerShell Best Practices and Style Guide](https://github.com/PoshCode/PowerShellPracticeAndStyle)
@@ -37,8 +49,8 @@
  - [Python PEP](https://www.python.org/dev/peps/pep-0008/)
 
 ## R Language
- - [Google's R Style Guide][3]
- - [Google's tweak guide]
+ - [Google R Style Guide][3]
+ - [Hadley Wickham R style guide](http://r-pkgs.had.co.nz/style.html)
  - [Stackoverflow R discussion](http://stackoverflow.com/questions/10013545/are-there-any-official-naming-conventions-for-r)
  - [Bioconductor R coding standards](http://bioconductor.org/developers/how-to/coding-style/)
  - [Bioconductor R Package Guidelines](http://bioconductor.org/developers/package-guidelines/)
@@ -47,8 +59,8 @@
 
 [1]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
 [2]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines
-[3]:http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
-[4]:https://google-styleguide.googlecode.com/svn/trunk/pyguide.html
+[3]:https://google.github.io/styleguide/Rguide.xml
+[4]:https://github.com/google/styleguide/blob/gh-pages/pyguide.md
 [5]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
 [6]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
 
@@ -62,5 +74,3 @@
 [R Language Definition]:http://cran.r-project.org/doc/manuals/R-lang.html
 [T-SQL Reference]:https://docs.microsoft.com/en-us/sql/t-sql/language-reference
 [PL/pgSQL Manual]:https://www.postgresql.org/docs/manuals/
-
-[Google's tweak guide]:http://r-pkgs.had.co.nz/style.html
