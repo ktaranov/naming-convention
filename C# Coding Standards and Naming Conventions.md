@@ -392,6 +392,13 @@ private void MyFunction(string name, string Name)
 
 #### 24. DO use two parameters named sender and e in event handlers. The sender parameter represents the object that raised the event. The sender parameter is typically of type object, even if it is possible to employ a more specific type.
 
+```csharp
+public void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e)
+{
+  //...
+}
+```
+
 ***Why: consistent with the Microsoft's .NET Framework***
 
 ***Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.***
