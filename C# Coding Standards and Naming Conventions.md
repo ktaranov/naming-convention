@@ -74,9 +74,9 @@ public const string SHIPPINGTYPE = "DropShip";
 #### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
 
 ```csharp
-var seattleCustomers = from cust in customers
-  where cust.City == "Seattle" 
-  select cust.Name;
+var seattleCustomers = from customer in customers
+  where customer.City == "Seattle" 
+  select customer.Name;
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
