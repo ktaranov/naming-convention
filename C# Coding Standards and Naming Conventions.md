@@ -69,7 +69,7 @@ public const string ShippingType = "DropShip";
 public const string SHIPPINGTYPE = "DropShip";
 ```
 
-***Why: consistent with the Microsoft's .NET Framework. Caps grap too much attention.***
+***Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention.***
 
 #### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
 
