@@ -27,6 +27,14 @@
  - [MSDN Approved Verbs for Windows PowerShellCommands][6]
  - [The PowerShell Best Practices and Style Guide](https://github.com/PoshCode/PowerShellPracticeAndStyle)
  - [PostgreSQL naming conventions](https://stackoverflow.com/q/2878248/2298061)
+ - [SEI CERT Coding Standards](https://wiki.sei.cmu.edu/confluence/display/HOME)
+   - [SEI CERT C Coding Standard](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard)
+   - [SEI CERT C++ Coding Standard](https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=88046682)
+   - [SEI CERT Oracle Coding Standard for Java](https://wiki.sei.cmu.edu/confluence/display/java/SEI+CERT+Oracle+Coding+Standard+for+Java)
+   - [Android Secure Coding Standard](https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard)
+   - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
+   - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
+   
 
 ## Relation Database Documentation
  - [SQL Server Documentation][7]
@@ -52,7 +60,7 @@
  - [Google R Style Guide][3]
  - [Hadley Wickham R style guide](http://r-pkgs.had.co.nz/style.html)
  - [Stackoverflow R discussion](http://stackoverflow.com/questions/10013545/are-there-any-official-naming-conventions-for-r)
- - [Bioconductor R coding standards](http://bioconductor.org/developers/how-to/coding-style/)
+ - [Bioconductor R Coding Standards](http://bioconductor.org/developers/how-to/coding-style/)
  - [Bioconductor R Package Guidelines](http://bioconductor.org/developers/package-guidelines/)
  - [Colin Gillespie’s R style guide](http://csgillespie.wordpress.com/2010/11/23/r-style-guide/)
  - [Hadley Wickham’s R style guide](http://stat405.had.co.nz/r-style.html)
