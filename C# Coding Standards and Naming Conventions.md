@@ -378,7 +378,7 @@ public delegate void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
-#### 23. Do not create names of parametres in methods (or constructors) which differ only by the register:
+#### 23. Do not create names of parameters in methods (or constructors) which differ only by the register:
 
 ```csharp 
 // Avoid
