@@ -1,10 +1,25 @@
-# Templates for naming convention
+# Templates for Naming Convention
+> There are only two hard things in Computer Science: cache invalidation and naming things
+> -- <cite>[Phil Karlton](https://www.karlton.org/2017/12/naming-things-hard/)</cite>
+
+[Naming convention][99] is a set of rules for choosing the character sequence to be used for identifiers which denote variables, types, functions, and other entities in source code and documentation.
+
+Reasons for using a naming convention (as opposed to allowing programmers to choose any character sequence) include the following:
+ - To reduce the effort needed to read and understand source code;
+ - To enable code reviews to focus on more important issues than arguing over syntax and naming standards.
+ - To enable code quality review tools to focus their reporting mainly on significant issues other than syntax and style preferences.
+
+[99]:https://en.wikipedia.org/wiki/Naming_convention_(programming)
+
+
+## Templates in Markdown Format
  - [C# Coding Standards and Naming Conventions](C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
  - [Git Comment Convention](Git%20Comment%20Convention.md)
  - [JavaScript Name and Coding Conventions](JavaScript%20Name%20and%20Coding%20Conventions.md)
  - [Powershell name convention](Powershell.md)
  - [R style guide and name convention](R%20style%20uide%20and%20name%20convention.md)
  - [SQL Server Name Convention and T-SQL Programming Style](SQL%20Server%20Name%20Convention%20and%20T-SQL%20Programming%20Style.md)
+
 
 ## Useful links for name conventions
  - [NET Naming Guidelines][1]
@@ -34,14 +49,15 @@
    - [Android Secure Coding Standard](https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard)
    - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
    - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
-   
+
 
 ## Relation Database Documentation
- - [SQL Server Documentation][7]
- - [SQLite Documentation][8]
- - [PostgreSQL Manual][9]
- - [Oracle DB documentation][10]
- - [MySQL documentation][11]
+ - [SQL Server Documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
+ - [SQLite Documentation](https://www.sqlite.org/docs.html)
+ - [PostgreSQL Manual](http://www.postgresql.org/docs/current/static/)
+ - [Oracle DB documentation](https://docs.oracle.com/en/database/database.html)
+ - [MySQL documentation](http://docs.oracle.com/cd/E17952_01/index.html)
+
 
 ## Different Languages Style Guides
  - C# Language ([C# Programming Guide])
@@ -54,7 +70,8 @@
  - R Language ([R Language Definition])
  - Transact-SQL ([T-SQL Reference])
  - Procedural Language/PostGres Structured Query Language ([PL/pgSQL Manual])
- - [Python PEP](https://www.python.org/dev/peps/pep-0008/)
+ - [Python PEP](https://www.python.org/dev/peps/)
+
 
 ## R Language
  - [Google R Style Guide][3]
@@ -71,12 +88,6 @@
 [4]:https://github.com/google/styleguide/blob/gh-pages/pyguide.md
 [5]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
 [6]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
-
-[7]:https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation
-[8]:https://www.sqlite.org/docs.html
-[9]:http://www.postgresql.org/docs/current/static/
-[10]:https://docs.oracle.com/en/database/database.html
-[11]:http://docs.oracle.com/cd/E17952_01/index.html
 
 [C# Programming Guide]:http://msdn.microsoft.com/ru-ru/library/67ef8sbd.aspx
 [R Language Definition]:http://cran.r-project.org/doc/manuals/R-lang.html
