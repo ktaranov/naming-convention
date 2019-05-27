@@ -1,4 +1,22 @@
 # Templates for Naming Convention
+[![licence badge]][licence]
+[![stars badge]][stars]
+[![forks badge]][forks]
+[![issues badge]][issues]
+[![contributors_badge]][contributors]
+
+[licence badge]:https://img.shields.io/badge/license-MIT-blue.svg
+[stars badge]:https://img.shields.io/github/stars/ktaranov/naming-convention.svg
+[forks badge]:https://img.shields.io/github/forks/ktaranov/naming-convention.svg
+[issues badge]:https://img.shields.io/github/issues/ktaranov/naming-convention.svg
+[contributors_badge]:https://img.shields.io/github/contributors/ktaranov/naming-convention.svg
+
+[licence]:https://github.com/ktaranov/naming-convention/blob/master/LICENSE.md
+[stars]:https://github.com/ktaranov/naming-convention/stargazers
+[forks]:https://github.com/ktaranov/naming-convention/network
+[issues]:https://github.com/ktaranov/naming-convention/issues
+[contributors]:https://github.com/ktaranov/naming-convention/graphs/contributors
+
 > There are only two hard things in Computer Science: cache invalidation and naming things
 > -- <cite>[Phil Karlton](https://www.karlton.org/2017/12/naming-things-hard/)</cite>
 
