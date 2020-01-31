@@ -62,6 +62,9 @@
  - [Colin Gillespie’s R style guide](http://csgillespie.wordpress.com/2010/11/23/r-style-guide/)
  - [Hadley Wickham’s R style guide](http://stat405.had.co.nz/r-style.html)
 
+## License
+[MIT](/LICENSE)
+
 [1]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
 [2]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines
 [3]:https://google.github.io/styleguide/Rguide.xml
