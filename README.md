@@ -7,6 +7,8 @@
  - [SQL Server Name Convention and T-SQL Programming Style](SQL%20Server%20Name%20Convention%20and%20T-SQL%20Programming%20Style.md)
 
 ## Useful links for name conventions
+ - [PEP 8 — the Style Guide for Python Code](https://pep8.org/)
+ - [PHP Standards Recommendations](https://www.php-fig.org/psr/)
  - [NET Naming Guidelines][1]
  - [Framework Design Guidelines][2]
  - [Google style guides for open source projects](https://github.com/google/styleguide)
@@ -27,6 +29,8 @@
  - [MSDN Approved Verbs for Windows PowerShellCommands][6]
  - [The PowerShell Best Practices and Style Guide](https://github.com/PoshCode/PowerShellPracticeAndStyle)
  - [PostgreSQL naming conventions](https://stackoverflow.com/q/2878248/2298061)
+ - [Lint commit messages](https://github.com/conventional-changelog/commitlint)
+ - [Comprehensive language-agnostic guidelines on naming variables](https://github.com/kettanaito/naming-cheatsheet)
 
 ## Relation Database Documentation
  - [SQL Server Documentation][7]
@@ -39,6 +43,7 @@
  - C# Language ([C# Programming Guide])
  - JavaScript
     - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+    - [Перевод «JavaScript Style Guide» от Airbnb](https://github.com/leonidlebedev/javascript-airbnb)
     - [Standard ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
     - [Microsoft TypeScript Coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
     - [Mozilla Javascript Manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

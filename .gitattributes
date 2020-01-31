@@ -1,0 +1,25 @@
+# STANDARD TO MSYSGIT
+*.DOC   DIFF=ASTEXTPLAIN
+*.DOCX  DIFF=ASTEXTPLAIN
+*.XLS   binary
+*.XLS   binary
+*.XLSX  binary
+*.PPT   binary
+*.PPTX  binary
+*.DOT   DIFF=ASTEXTPLAIN
+*.PDF   DIFF=ASTEXTPLAIN
+*.RTF   DIFF=ASTEXTPLAIN
+
+*.JPG  BINARY
+*.PNG  BINARY
+*.GIF  BINARY
+*.ICO  BINARY
+*.BMP  BINARY
+*.MDF  BINARY
+*.LDF  BINARY
+*.MAFF BINARY
+
+# EOL = lf
+*.HTM  eol=lf merge=union
+*.HTML eol=lf merge=union
+*.MD   eol=lf merge=union
