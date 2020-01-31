@@ -3,10 +3,10 @@
 | Object Name        | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask  | Underscores |
 |--------------------|------------|--------|--------|--------|--------|--------------|------------|-------------|
 | Function name      | PascalCase |     50 | Yes    | No     | Yes    | Yes          | [A-z][0-9] | No          |
-| Function arguments | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
-| Local variables    | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
+| Function arguments | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
+| Local variables    | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Constants name     | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
-| Field name         | CamelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
+| Field name         | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 
 
 ## Coding conventions are style guidelines for programming. They typically cover:

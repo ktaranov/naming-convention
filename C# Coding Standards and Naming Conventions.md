@@ -69,14 +69,14 @@ public const string ShippingType = "DropShip";
 public const string SHIPPINGTYPE = "DropShip";
 ```
 
-***Why: consistent with the Microsoft's .NET Framework. Caps grap too much attention.***
+***Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention.***
 
 #### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
 
 ```csharp
-var seattleCustomers = from cust in customers
-  where cust.City == "Seattle" 
-  select cust.Name;
+var seattleCustomers = from customer in customers
+  where customer.City == "Seattle" 
+  select customer.Name;
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
@@ -378,7 +378,7 @@ public delegate void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
-#### 23. Do not create names of parametres in methods (or constructors) which differ only by the register:
+#### 23. Do not create names of parameters in methods (or constructors) which differ only by the register:
 
 ```csharp 
 // Avoid
@@ -392,6 +392,13 @@ private void MyFunction(string name, string Name)
 
 #### 24. DO use two parameters named sender and e in event handlers. The sender parameter represents the object that raised the event. The sender parameter is typically of type object, even if it is possible to employ a more specific type.
 
+```csharp
+public void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e)
+{
+  //...
+}
+```
+
 ***Why: consistent with the Microsoft's .NET Framework***
 
 ***Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.***
@@ -402,6 +409,17 @@ private void MyFunction(string name, string Name)
 // Correct
 public class BarcodeReadException : System.Exception
 {
+}
+```
+
+***Why: consistent with the Microsoft's .NET Framework and easy to read.***
+
+#### 26. Do use suffix Any, Is, Have or similar keywords for boolean identifier :
+
+```csharp 
+// Correct
+public static bool IsNullOrEmpty(string value) {
+    return (value == null || value.Length == 0);
 }
 ```
 
