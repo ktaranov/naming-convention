@@ -43,7 +43,7 @@ Additional information about commit changes
 - [WIKI OpenStack Information in commit messages](https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages)
 - [Karma-Runner Git Commit Msg](http://karma-runner.github.io/0.8/dev/git-commit-msg.html)
 - [Wiki.Typo3.Org CommitMessage Format](http://wiki.typo3.org/CommitMessage_Format_(Git))
-- [How to Write a Git Commit Message ](http://www.chrisbeams.com/posts/git-commit/)
+- [How to Write a Git Commit Message ](https://webcache.googleusercontent.com/search?q=cache:PM7POmjONvgJ:https://chris.beams.io/posts/git-commit/+&cd=1&hl=sl&ct=clnk&gl=si&client=firefox-b-d)
 
 
 ## Usefull links
