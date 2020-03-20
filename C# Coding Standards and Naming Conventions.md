@@ -414,7 +414,7 @@ public class BarcodeReadException : System.Exception
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
-#### 26. Do use suffix Any, Is, Have or similar keywords for boolean identifier :
+#### 26. Do use prefix Any, Is, Have or similar keywords for boolean identifier :
 
 ```csharp 
 // Correct
