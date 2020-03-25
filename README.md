@@ -83,7 +83,7 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 
 
 ## Different Languages Style Guides
- - C# Language ([C# Programming Guide])
+ - [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
  - JavaScript
     - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
     - [Перевод «JavaScript Style Guide» от Airbnb](https://github.com/leonidlebedev/javascript-airbnb)
