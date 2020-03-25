@@ -71,6 +71,7 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
    - [Android Secure Coding Standard](https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard)
    - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
    - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
+ - [SQL Style Guide](https://www.sqlstyle.guide)
 
 
 ## Relation Database Documentation
