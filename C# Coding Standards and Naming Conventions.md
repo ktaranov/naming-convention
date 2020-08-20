@@ -99,12 +99,12 @@ UriPart uriPart;
 
 ***Why: consistent with the Microsoft's .NET Framework and prevents inconsistent abbreviations.***
 
-#### 7. Do use PascalCasing for abbreviations 3 characters or more (2 chars are both uppercase):
+#### 7. Do use PascalCasing or camelCasing (Depending on the identifier type) for abbreviations 3 characters or more (2 chars are both uppercase when PascalCasing is appropriate or inside the identifier).:
 
 ```csharp  
 HtmlHelper htmlHelper;
-FtpTransfer ftpTransfer;
-UIControl uiControl;
+FtpTransfer ftpTransfer, fastFtpTransfer;
+UIControl uiControl, nextUIControl;
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework. Caps would grap visually too much attention.***
