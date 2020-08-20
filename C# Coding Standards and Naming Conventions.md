@@ -64,19 +64,19 @@ string strName;
 
 ```csharp
 // Correct
-public static const string ShippingType = "DropShip";    
+public const string ShippingType = "DropShip";
 // Avoid
-public static const string SHIPPINGTYPE = "DropShip";
+public const string SHIPPINGTYPE = "DropShip";
 ```
 
-***Why: consistent with the Microsoft's .NET Framework. Caps grap too much attention.***
+***Why: consistent with the Microsoft's .NET Framework. Caps grab too much attention.***
 
 #### 5. Use meaningful names for variables. The following example uses seattleCustomers for customers who are located in Seattle:
 
 ```csharp
-var seattleCustomers = from cust in customers
-  where cust.City == "Seattle" 
-  select cust.Name;
+var seattleCustomers = from customer in customers
+  where customer.City == "Seattle" 
+  select customer.Name;
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
@@ -99,6 +99,7 @@ UriPart uriPart;
 
 ***Why: consistent with the Microsoft's .NET Framework and prevents inconsistent abbreviations.***
 
+
 #### 7. Do use PascalCasing or camelCasing (Depending on the identifier type) for abbreviations 3 characters or more (2 chars are both uppercase when PascalCasing is appropriate or inside the identifier).:
 
 ```csharp  
@@ -107,7 +108,7 @@ FtpTransfer ftpTransfer, fastFtpTransfer;
 UIControl uiControl, nextUIControl;
 ```
 
-***Why: consistent with the Microsoft's .NET Framework. Caps would grap visually too much attention.***
+***Why: consistent with the Microsoft's .NET Framework. Caps would grab visually too much attention.***
 
 #### 8. Do not use Underscores in identifiers. Exception: you can prefix private fields with an underscore:
 
@@ -378,7 +379,7 @@ public delegate void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
-#### 23. Do not create names of parametres in methods (or constructors) which differ only by the register:
+#### 23. Do not create names of parameters in methods (or constructors) which differ only by the register:
 
 ```csharp 
 // Avoid
@@ -392,6 +393,13 @@ private void MyFunction(string name, string Name)
 
 #### 24. DO use two parameters named sender and e in event handlers. The sender parameter represents the object that raised the event. The sender parameter is typically of type object, even if it is possible to employ a more specific type.
 
+```csharp
+public void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e)
+{
+  //...
+}
+```
+
 ***Why: consistent with the Microsoft's .NET Framework***
 
 ***Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.***
@@ -402,6 +410,17 @@ private void MyFunction(string name, string Name)
 // Correct
 public class BarcodeReadException : System.Exception
 {
+}
+```
+
+***Why: consistent with the Microsoft's .NET Framework and easy to read.***
+
+#### 26. Do use prefix Any, Is, Have or similar keywords for boolean identifier :
+
+```csharp 
+// Correct
+public static bool IsNullOrEmpty(string value) {
+    return (value == null || value.Length == 0);
 }
 ```
 
