@@ -1,4 +1,5 @@
 # SQL Server Name Convention and T-SQL Programming Style
+
 > There are only two hard things in Computer Science: cache invalidation and naming things
 > -- <cite>[Phil Karlton](https://www.karlton.org/2017/12/naming-things-hard/)</cite>
 
@@ -11,8 +12,10 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 
 
 ## Table of Contents
+
 - [SQL Server Object Name Convention](#sql-server-object-name-convention)
 - [SQL Server Data Types Recommendation](#data-types-recommendation)
+- [SQL Server Function Recommendations](#function-recommendation)
 - [T-SQL Programming T-SQL Style](#t-sql-programming-style)
   - [General T-SQL programming style](#general-t-sql-programming-style)
   - [Stored procedures and functions programming style](#programming-style)
@@ -20,8 +23,8 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 - [Reference and useful links](#reference)
 
 
-## SQL Server Object Name Convention
 <a id="sql-server-object-name-convention"></a>
+## SQL Server Object Name Convention
 
 | Object                                   | Code | Notation   | Length | Plural | Prefix  | Suffix | Abbreviation | Char Mask    | Example                              |
 |------------------------------------------|------| ---------- |-------:|--------|---------|--------|--------------|--------------|--------------------------------------|
@@ -43,13 +46,14 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 | [Table Primary Key]                      | PK   | PascalCase |    128 | No     | `PK_`   | No     | Yes          | [A-z][0-9]   | `PK_MyTableID`                       |
 | [Table Unique (Alternative) Key]         | UQ   | PascalCase |    128 | No     | `AK_`   | No     | Yes          | [A-z][0-9]   | `AK_MyTable_MyColumn_AnotherColumn`  |
 | [Table Foreign Key]                      | F    | PascalCase |    128 | No     | `FK_`   | No     | Yes          | [A-z][0-9]   | `FK_MyTable_ForeignTableID`          |
-| [Table Clustered Index]                  |      | PascalCase |    128 | No     | `IXC`   | No     | Yes          | [A-z][0-9]   | `IXC_MyTable_MyColumn_AnotherColumn` |
+| [Table Clustered Index]                  |      | PascalCase |    128 | No     | `IXC_`  | No     | Yes          | [A-z][0-9]   | `IXC_MyTable_MyColumn_AnotherColumn` |
 | [Table Non Clustered Index]              |      | PascalCase |    128 | No     | `IX_`   | No     | Yes          | [A-z][0-9]   | `IX_MyTable_MyColumn_AnotherColumn`  |
 | [DDL Trigger]                            | TR   | PascalCase |    128 | No     | `TR_`   | `_DDL` | Yes          | [A-z][0-9]   | `TR_LogicalName_DDL`                 |
 | [DML Trigger]                            | TR   | PascalCase |    128 | No     | `TR_`   | `_DML` | Yes          | [A-z][0-9]   | `TR_MyTable_LogicalName_DML`         |
 | [Logon Trigger]                          | TR   | PascalCase |    128 | No     | `TR_`   | `_LOG` | Yes          | [A-z][0-9]   | `TR_LogicalName_LOG`                 |
 | [View]                                   | V    | PascalCase |    128 | No     | `VI_`   | No     | No           | [A-z][0-9]   | `VI_LogicalName`                     |
-| [Indexed View]                           | V    | PascalCase |    128 | No     | `VIX_`  | No     | No           | [A-z][0-9]   | `VIx_LogicalName`                    |
+| [Indexed View]                           | V    | PascalCase |    128 | No     | `VIX_`  | No     | No           | [A-z][0-9]   | `VIX_LogicalName`                    |
+| [Statistic]                              |      | PascalCase |    128 | No     | `ST_`   | No     | No           | [A-z][0-9]   | `ST_MyTable_MyColumn_AnotherColumn`  |
 | [Stored Procedure]                       | P    | PascalCase |    128 | No     | `usp_`  | No     | No           | [A-z][0-9]   | `usp_LogicalName`                    |
 | [Scalar User-Defined Function]           | FN   | PascalCase |    128 | No     | `udf_`  | No     | No           | [A-z][0-9]   | `udf_FunctionLogicalName`            |
 | [Table-Valued Function]                  | FN   | PascalCase |    128 | No     | `tvf_`  | No     | No           | [A-z][0-9]   | `tvf_FunctionLogicalName`            |
@@ -62,6 +66,7 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 | [CLR User-Defined Aggregates]            |      | PascalCase |    128 | No     | `ca_`   | No     | No           | [A-z][0-9]   | `ca_CAName_LogicalName`              |
 | [CLR User-Defined Types]                 |      | PascalCase |    128 | No     | `ct_`   | No     | No           | [A-z][0-9]   | `ct_CAName_LogicalName`              |
 | [CLR Triggers]                           |      | PascalCase |    128 | No     | `ctr_`  | No     | No           | [A-z][0-9]   | `ctr_CAName_LogicalName`             |
+| [Linked Server]                          |      | PascalCase |    128 | No     | `ls_`   | No     | No           | [A-z][0-9]   | `ls_LogicalName`                     |
 
 [Database]:https://docs.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql
 [Schema]:https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/create-a-database-schema
@@ -88,6 +93,7 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 [Logon Trigger]:https://docs.microsoft.com/en-us/sql/t-sql/statements/create-trigger-transact-sql
 [View]:https://docs.microsoft.com/en-us/sql/relational-databases/views/views
 [Indexed View]:https://docs.microsoft.com/en-us/sql/relational-databases/views/create-indexed-views
+[Statistic]:https://docs.microsoft.com/en-us/sql/t-sql/statements/create-statistics-transact-sql
 [Stored Procedure]:https://docs.microsoft.com/en-us/sql/t-sql/statements/create-procedure-transact-sql
 [Scalar User-Defined Function]:https://docs.microsoft.com/en-us/sql/relational-databases/user-defined-functions/create-user-defined-functions-database-engine#Scalar
 [Table-Valued Function]:https://docs.microsoft.com/en-us/sql/relational-databases/user-defined-functions/create-user-defined-functions-database-engine#TVF
@@ -100,12 +106,14 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 [CLR User-Defined Aggregates]:https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates
 [CLR User-Defined Types]:https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types
 [CLR Triggers]:https://docs.microsoft.com/en-us/sql/relational-databases/triggers/create-clr-triggers
+[Linked Server]:https://docs.microsoft.com/en-us/sql/relational-databases/linked-servers/linked-servers-database-engine
 
 **[⬆ back to top](#table-of-contents)**
 
 
-## SQL Server Data Types Recommendation
 <a id="data-types-recommendation"></a>
+## SQL Server Data Types Recommendation
+
 More details about SQL Server data types and mapping it with another databases and program languages you can find [here](https://github.com/ktaranov/sqlserver-kit/blob/master/SQL%20Server%20Data%20Types.md)
 
 | General Type         | Type                | ANSI | Recommended    | What use instead   | Why use or not                                                                     |
@@ -114,7 +122,7 @@ More details about SQL Server data types and mapping it with another databases a
 | Exact Numerics       | [tinyint][1]        | No   | *Maybe*        | [int][1]           | for saving 3 bytes compare to `int` data type or for replacing `bit` data type     |
 | Exact Numerics       | [smallint][1]       | Yes  | *Maybe*        | [int][1]           | for saving 2 bytes compare to `int` data type                                      |
 | Exact Numerics       | [int][1]            | Yes  | Yes            | -                  |                                                                                    |
-| Exact Numerics       | [bigint][1]         | No   | Yes            | [int][1]           | if you work more than                                                              |
+| Exact Numerics       | [bigint][1]         | No   | Yes            | [int][1]           | if you work more than 2^31 numbers.                                                |
 | Exact Numerics       | [decimal][2]        | Yes  | Yes            | -                  |                                                                                    |
 | Exact Numerics       | [smallmoney][3]     | No   | *Maybe*        | [decimal][2]       | [possibility to loss precision due to rounding errors][9]                          |
 | Exact Numerics       | [money][3]          | No   | *Maybe*        | [decimal][2]       | [possibility to loss precision due to rounding errors][9]                          |
@@ -188,32 +196,135 @@ More details about SQL Server data types and mapping it with another databases a
 **[⬆ back to top](#table-of-contents)**
 
 
-## T-SQL Programming Style
+<a id="function-recommendation"></a>
+## SQL Server Function Recommendations
+
+This is only recommendations! But it is consistent for choosing only 1 function from possibles alterntives and use only it.
+
+| Not Recommended | Recommended     | When and Why                                                                                                                                   | More details   |
+|-----------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| [`!=`][12]      | [`<>`][12]      | `<>` is [`ANSI`], `!=` not `ANSI`, [`<>` and `!=` are identical][13]                                                                           | [13]           |
+| [`CONVERT`][10] | [`CAST`][10]    | `CAST` is [`ANSI`]                                                                                                                             | [14],[15]      |
+| [`ISNULL`]      | [`COALECSE`]    | `COALECSE` is [`ANSI`] and supports more than two arguments, `ISNULL` has dangerous behaviour with possibility to implicit triming string      | [16],[17]      |
+| [`DATEDIFF`]    | [`DATEADD`]     | The predicate `MyDateTime < DATEADD(SECOND, -1, GETUTCDATE())` syntax is [`SARGable`]                                                          | [18],[19]      |
+| [`SELECT`]      | [`SET`]         | Using `SET` (is [`ANSI`]) instead of `SELECT` when assigning variables due to properly work with `Msg 501 Subquery returned more than 1 value` | [20],[21],[22] |
+| [`STR`]         | [`CAST`][10]    | `STR` is not [`ANSI`], extremly slow, don't use more than 15 digits, and has rounding problem - use `CAST` plus concatenate instead `STR`      | [23]           |
+| [`ISNUMERIC`]   | [`TRY_CONVERT`] | `ISNUMERIC` can often lead to data type conversion errors, when importing data. For SQL Server below 2012 use `WHERE` with `LIKE`.             | [24]           |
+
+[12]:https://docs.microsoft.com/sql/t-sql/language-elements/comparison-operators-transact-sql
+[13]:https://dba.stackexchange.com/a/155670/107045
+[14]:https://www.sentryone.com/blog/aaronbertrand/backtobasics-cast-vs-convert
+[15]:https://nakulvachhrajani.com/2011/07/18/cast-vs-convert-is-there-a-difference-as-far-as-sql-server-is-concerned-which-is-better/
+[`COALECSE`]:https://docs.microsoft.com/sql/t-sql/language-elements/coalesce-transact-sql
+[`ISNULL`]:https://docs.microsoft.com/sql/t-sql/functions/isnull-transact-sql
+[16]:https://www.mssqltips.com/sqlservertip/2689/deciding-between-coalesce-and-isnull-in-sql-server/
+[17]:https://nocolumnname.blog/2017/10/09/a-subtle-difference-between-coalesce-and-isnull/
+[`DATEADD`]:https://docs.microsoft.com/en-us/sql/t-sql/functions/dateadd-transact-sql
+[`DATEDIFF`]:https://docs.microsoft.com/en-us/sql/t-sql/functions/datediff-transact-sql
+[`SARGable`]:https://www.sqlshack.com/how-to-use-sargable-expressions-in-t-sql-queries-performance-advantages-and-examples/
+[18]:https://michaeljswart.com/2017/12/when-measuring-timespans-try-dateadd-instead-of-datediff/
+[19]:https://dba.stackexchange.com/q/132437/107045
+[`SET`]:https://docs.microsoft.com/en-gb/sql/t-sql/language-elements/set-local-variable-transact-sql
+[`SELECT`]:https://docs.microsoft.com/en-gb/sql/t-sql/language-elements/select-local-variable-transact-sql
+[20]:https://assets.red-gate.com/community/books/defensive-database-programming.pdf
+[21]:https://www.mssqltips.com/sqlservertip/1888/when-to-use-set-vs-select-when-assigning-values-to-variables-in-sql-server/
+[22]:http://vyaskn.tripod.com/differences_between_set_and_select.htm
+[`STR`]:https://docs.microsoft.com/en-us/sql/t-sql/functions/str-transact-sql
+[23]:https://www.sqlservercentral.com/articles/hidden-formatting-troubles-with-str-sql-spackle
+[`ISNUMERIC`]:https://docs.microsoft.com/en-us/sql/t-sql/functions/isnumeric-transact-sql
+[`TRY_CONVERT`]:https://docs.microsoft.com/en-us/sql/t-sql/functions/try-convert-transact-sql
+[24]:https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-using-isnumeric-function-e1029
+
+**[⬆ back to top](#table-of-contents)**
+
+
 <a id="t-sql-programming-style"></a>
+## T-SQL Programming Style
 SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
 
 
-### General programming T-SQL style
 <a id="#general-t-sql-programming-style"></a>
+### General programming T-SQL style
 
- - For database objects names in code use only schema plus object name, do not hardcode server and database names in your code: `dbo.MyTable` is good and bad `PRODSERVER.PRODDB.dbo.MyTable`.
+ - For database objects names in code use only schema plus object name, do not hardcode server and database names in your code:
+   ```tsql
+   /* good */
+   CREATE TABLE dbo.MyTable (MyColumn int);
+   
+   /* bad*/
+   CREATE TABLE PRODSERVER.PRODDB.dbo.MyTable (MyColumn int);
+   CREATE TABLE MyTable (MyColumn int);
+   ```
    More details [here](https://www.red-gate.com/simple-talk/opinion/editorials/why-you-shouldnt-hardcode-the-current-database-name-in-your-views-functions-and-stored-procedures/),
-   [here](https://www.sqlserverscience.com/basics/on-default-schemas-and-search-paths/) and [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-procedures-lack-schema-qualification).
- - Delimiters: **spaces** (not tabs)
- - Avoid using asterisk in select statements `SELECT *`, use explicit column names.
-   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-asterisk-select-list).
+   [here](https://www.sqlserverscience.com/basics/on-default-schemas-and-search-paths/),
+   [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-procedures-lack-schema-qualification),
+   [here](https://sqlstudies.com/2020/06/22/i-created-a-table-and-sql-created-a-schema-and-a-user/),
+   [here](https://sqlperformance.com/2014/11/t-sql-queries/multiple-plans-identical-query),
+   [here](https://sqlblog.org/2019/09/12/bad-habits-to-kick-avoiding-the-schema-prefix).
+ - Delimiters: **spaces** (not tabs).
+ - Never use asterisk (`*`) in select statements `SELECT *` and `INSERT` statements, use explicit column names.
+   Main problems are: traffic issues, Memory Grants issues, Index usage issues.
+   **Only one exception, see it below.**
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-asterisk-select-list),
+   [here](https://sqlblog.org/2009/10/10/bad-habits-to-kick-using-select-omitting-the-column-list),
+   [here](https://dba.stackexchange.com/q/253873/107045),
+   [here](https://www.erikdarlingdata.com/sql-server/all-the-problems-with-select/).
+ - Use asterisk (`*`) only in an archiving situation, where rows are being moved to another table that must have the same structure.
+   ```sql
+   INSERT INTO SalesOrderArchive  /* Note no column list */
+   SELECT *
+   FROM SalesOrder
+   WHERE OrderDate < @OneYearAgo;
+    
+   DELETE FROM SalesOrder
+   WHERE OrderDate < @OneYearAgo;
+   ```
+   If a new column is added to `SalesOrder` table in the future, but not to `SalesOrderArchive`, the `INSERT` will fail.
+   Which sounds bad, but it's actually a really good thing! Because the alternative is much worse.
+   If all the columns were listed on the `INSERT` and the `SELECT`, then the `INSERT` would succeed, and so would the following `DELETE` (which is effectively `DELETE *`).
+   Production code that succeeds doesn't get any attention, and it may be a long time before someone notices that the new column is not being archived, but being silently deleted altogether.
+   More details [here](https://dba.stackexchange.com/a/253917/107045).
  - No square brackets `[]` and [reserved words](https://github.com/ktaranov/sqlserver-kit/blob/master/Scripts/Check_Reserved_Words_For_Object_Names.sql) in object names and alias, use only Latin symbols **`[A-z]`** and numeric **`[0-9]`**.
- - Prefer [ANSI syntax](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip) and functions ([`CAST`][10] instead [`CONVERT`][10], [`COALESE`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/coalesce-transact-sql) instead [`ISNULL`](https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql), etc.).
+ - Prefer [`ANSI`](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip) syntax and functions ([`CAST`][10] instead [`CONVERT`][10], [`COALESE`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/coalesce-transact-sql) instead [`ISNULL`](https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql), etc.).
  - All finished expressions should have semicolon `;` at the end.
-   This is ANSI standard and Microsoft announced with the SQL Server 2008 release that semicolon statement terminators will become mandatory in a future version so statement terminators other than semicolons (whitespace) are currently deprecated.
+   This is [`ANSI`] standard and Microsoft announced with the SQL Server 2008 release that semicolon statement terminators will become mandatory in a future version so statement terminators other than semicolons (whitespace) are currently deprecated.
    This deprecation announcement means that you should always use semicolon terminators in new development.
-   More details [here](http://www.dbdelta.com/always-use-semicolon-statement-terminators/).
- - All script files should end with `GO` and line break.
- - Keywords should be in **UPPERCASE**: `SELECT`, `FROM`, `GROUP BY` etc.
+   From [Transact-SQL Syntax Conventions (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql):
+   > Although the semicolon isn't required for most statements in this version of SQL Server, it will be required in a future version.
+   More details [here](http://www.dbdelta.com/always-use-semicolon-statement-terminators/), [here](https://www.brentozar.com/archive/2015/12/give-your-t-sql-a-semicolonoscopy/), and [here](https://sqlblog.org/2009/09/03/ladies-and-gentlemen-start-your-semi-colons).
+ - All script files should end with `GO` and line break. This is neccesary for batching scripts run throw `sqlcmd` or another tools.
+ - Keywords should be in **UPPERCASE**: `SELECT`, `FROM`, `GROUP BY` etc. This increases the readability of the code.
  - Data types declaration should be in **lowercase**: `varchar(30)`, `int`, `real`, `nvarchar(max)` etc.
    More details [here](https://www.sentryone.com/blog/aaronbertrand/backtobasics-lower-case-data-types).
  - All system database and tables must be in **lowercase** for properly working for Case Sensitive instance: `master, sys.tables …`.
- - Avoid non-standard column aliases, use, if required, double-quotes for special characters and always `AS` keyword before alias:
+ - Do not use [nested transactions](https://docs.microsoft.com/en-us/sql/ado/guide/data/transaction-processing#nested-transactions).
+   The commit of a nested transaction has absolutely no effect – as the only transaction that really exists as far as SQL Server is concerned is the outer one.
+   More details [here](https://www.sqlskills.com/blogs/paul/a-sql-server-dba-myth-a-day-2630-nested-transactions-are-real/).
+ - Whenever you have data modification on non-temporary tables, is to use [explicit transactions] over [autocommit].
+   1. If you have a stored procedure which is simply running a `SELECT` statement, use [autocommit].
+   2. If you have a stored procedure which performs data modification on non-temporary tables, use an [explicit transactions] only over the area which modifies data.
+   3. If you are working with non-global temporary tables beforehand, don’t include any modification of those inside the explicit transaction. 
+   4. In a [loop](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/while-transact-sql), choose whether you want to put the [explicit transactions] around the loop or inside it. In most cases, prefer to put the transaction inside the loop to minimize the amount of time that blocking other users.
+   5. Outside of a stored procedure use [explicit transactions] if you’re doing something potentially risky.
+   6. Watch out for nested transactions. In SQL Server, there’s very little utility in them and their behavior is weird. [Paul Randal explains in great detail just how broken they are](https://www.sqlskills.com/blogs/paul/a-sql-server-dba-myth-a-day-2630-nested-transactions-are-real/).
+   More details [here](https://36chambers.wordpress.com/2020/08/10/transaction-modes-in-sql-server/).
+ - Avoid using [Cross-Database Queries](https://docs.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/cross-database-queries) because it increase backup/restore complexity (you restore one database, then realise you don’t have log backups to bring the other database to the same point in time).
+   Also Azure SQL Database does not support cross-database queries and you can not migrate into in future.
+ - Use `temp` tables to reduce network trafic, decrease query complexity and also to get better estimates for modification queries. More details [here](https://www.brentozar.com/archive/2020/04/how-to-get-better-estimates-for-modification-queries/).
+   `INFORMATION_SCHEMA` views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the `sys.objects` catalog view.
+ - When more than one logical operator is used always use parentheses, even when they are not required.
+   This can improve the readability of queries, and reduce the chance of making a subtle mistake because of operator precedence.
+   There is no significant performance penalty in using parentheses. More details [here](https://docs.microsoft.com/en-us/sql/relational-databases/query-processing-architecture-guide?view=sql-server-ver15#logical-operator-precedence).
+   ```sql
+   SELECT
+       ProductID
+   FROM Production.Product
+   WHERE (ProductModelID = 20 OR ProductModelID = 21)
+       AND Color = 'Red';
+
+   ```
+ - Always use aliases for table names. More details [here](https://sqlinthewild.co.za/index.php/2019/04/23/no-this-is-not-a-bug-in-t-sql/).
+ -  <a id="tsql-alias"> Avoid non-standard column and table aliases, use, if required, double-quotes for special characters and always `AS` keyword before alias:
    ```sql
    SELECT
           p.LastName AS "Last Name"
@@ -243,13 +354,13 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
  - The first argument in `SELECT` expression should be on the next line:
    ```sql
     SELECT
-           FirstName
+        FirstName
    ```
  - Arguments are divided by line breaks, commas should be placed before an argument:
    ```sql
    SELECT
-          FirstName
-        , LastName
+        FirstName
+      , LastName
    ```
  - For SQL Server >= 2012 use [`FETCH-OFFSET`] instead [`TOP`].
    More details [here](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql#using-offset-and-fetch-to-limit-the-rows-returned).
@@ -258,7 +369,6 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
  - If you using [`TOP`] (instead recommended [`FETCH-OFFSET`]) function with round brackets because [`TOP`] has supports use of an expression, such as `(@Rows*2)`, or a sub query: `SELECT TOP(100) LastName …`.
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoiding-old-style-top-clause).
    Also [`TOP`] without brackets does not work with `UPDATE` and `DELETE` statements.
-
    ```tsql
    /* Not working without brackets () */
    DECLARE @n int = 1;
@@ -272,28 +382,20 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
   More details [here](https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql#best-practices).
   ```sql
   /* bad */
-  SELECT ProductID, Name FROM Production.Production ORDER BY 2;
+  SELECT ProductID, Name FROM production.Production ORDER BY 2;
 
   /* good */
-  SELECT ProductID, Name FROM Production.Production ORDER BY Name;
+  SELECT ProductID, Name FROM production.Production ORDER BY Name;
   ```
 
- - Avoid using [`ISNUMERIC`](https://docs.microsoft.com/en-us/sql/t-sql/functions/isnumeric-transact-sql) function. Use for SQL Server >= 2012 [`TRY_CONVERT`](https://docs.microsoft.com/en-us/sql/t-sql/functions/try-convert-transact-sql) function and for SQL Server < 2012 `LIKE` expression:
-   ```tsql
-   CASE WHEN STUFF(LTRIM(TapAngle),1,1,'') NOT LIKE '%[^-+.ED0123456789]%' /* is it a float? */
-             AND LEFT(LTRIM(TapAngle),1) LIKE '[-.+0123456789]'
-             AND TapAngle LIKE '%[0123456789][ED][-+0123456789]%'
-             AND RIGHT(TapAngle ,1) LIKE N'[0123456789]'
-        THEN 'float'
-        WHEN STUFF(LTRIM(TapAngle),1,1,'') NOT LIKE '%[^.0123456789]%' /* is it numeric? */
-             AND LEFT(LTRIM(TapAngle),1) LIKE '[-.+0123456789]'
-             AND TapAngle LIKE '%.%' AND TapAngle NOT LIKE '%.%.%'
-             AND TapAngle LIKE '%[0123456789]%'
-        THEN 'float'
-   ELSE NULL
-   END
-   ```
-   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-avoid-using-isnumeric-function-e1029).
+ - Avoid wrapping functions around columns specified in the `WHERE` and `JOIN` clauses.
+   Doing so makes the columns non-deterministic and prevents the query processor from using indexes.
+ - Use `NULL` or `NOT NULL` for each column in a temporary table. The [`ANSI_NULL_DFLT_ON`] option control the way the Database Engine assigns the `NULL` or `NOT NULL` attributes to columns when these attributes are not specified in a `CREATE TABLE` or `ALTER TABLE` statement.
+   If a connection executes a procedure with different settings for these options than the connection that created the procedure, the columns of the table created for the second connection can have different nullability and exhibit different behavior. If `NULL` or `NOT NULL` is explicitly stated for each column, the temporary tables are created by using the same nullability for all connections that execute the procedure.
+   [`ANSI_NULL_DFLT_ON`]:https://docs.microsoft.com/en-us/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql
+ - Use modification statements that convert nulls and include logic that eliminates rows with null values from queries. Be aware that in Transact-SQL, `NULL` is not an empty or "nothing" value. It is a placeholder for an unknown value and can cause unexpected behavior, especially when querying for result sets or using AGGREGATE functions.
+ - Use the `UNION ALL` operator instead of the `UNION` or `OR` operators, unless there is a specific need for distinct values.
+   The `UNION ALL` operator requires less processing overhead because duplicates are not filtered out of the result set.
  - Avoid using `INSERT INTO` a permanent table with `ORDER BY`.
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-insert-permanent-table-order-pe020).
  - Avoid using shorthand (`wk, yyyy, d` etc.) with date/time operations, use full names: `month, day, year`.
@@ -305,6 +407,11 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/sql-prompt-code-analysis-a-hint-is-used-pe004-7).
  - Use [`NOEXPAND`](https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-table#using-noexpand) hint for [indexed views](https://docs.microsoft.com/sql/relational-databases/views/create-indexed-views) on non enterprise editions and Prior to SQL Server 2016 (13.x) SP1 to let the query optimizer know that we have indexes.
    More details [here](https://bornsql.ca/blog/using-indexed-views-dont-forget-this-important-tip/).
+ - Use [`LOOP JOIN`](https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-query#arguments) and [`FAST 1`](https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-query#arguments) query hints for deleting huge number of rows with `ON DELETE CASCADE` foreign keys specification.
+   More details [here](https://dba.stackexchange.com/a/262116).
+ - If you use [hints] always use it with `WITH` keyword because omitting the `WITH` keyword is a deprecated feature and will be removed from future Microsoft SQL Server versions.
+   One benefit of using the `WITH` keyword is that you can specify multiple table hints using the WITH keyword against the same table.
+   More details [here](https://www.sqlshack.com/understanding-impact-clr-strict-security-configuration-setting-sql-server-2017/).
  - Avoid use of `SELECT…INTO` for production code, use instead `CREATE TABLE` + `INSERT INTO …` approach. More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/use-selectinto-statement).
  - Use only ISO standard JOINS syntaxes. The *old style* Microsoft/Sybase `JOIN` style for SQL, which uses the `=*` and `*=` syntax, has been deprecated and is no longer used.
    Queries that use this syntax will fail when the database engine level is 10 (SQL Server 2008) or later (compatibility level 100). The ANSI-89 table citation list (`FROM tableA, tableB`) is still ISO standard for `INNER JOINs` only. Neither of these styles are worth using.
@@ -312,6 +419,17 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-old-style-join-syntax-st001).
  - Do not use a scalar user-defined function (UDF) in a `JOIN` condition, `WHERE` search condition, or in a `SELECT` list, unless the function is [schema-bound](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-function-transact-sql#best-practices).
    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/misuse-scalar-user-defined-function-constant-pe017).
+ - For scalar function use [`WITH SCHEMABINDING`](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-function-transact-sql#best-practices) option to get a performance boost. More details [here](https://bertwagner.com/2018/12/04/two-words-for-faster-scalar-functions/)
+ - Do not use [`INFORMATION_SCHEMA`] views to determine the schema of an object. [`INFORMATION_SCHEMA`] views only represent a **subset of the metadata** of an object.
+   The only reliable way to find the schema of a object is to query the [`sys.objects`](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) catalog view.
+   More details [here](https://github.com/MicrosoftDocs/sql-docs/issues/4188).
+ - Do not use explicit transactions for DML and DDL especially for reorganize index because the locking behavior of this statemnets becomes more restrictive.
+   More details [here](https://github.com/MicrosoftDocs/sql-docs/pull/4011).
+ - In [sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility) move the `-U`and `-P` parameters after the `-Q` parameter so that the password is at the end of the command.
+   More details [here](https://bornsql.ca/blog/the-curious-case-of-the-sqlcmd-password/)
+   ```
+   sqlcmd -S MSSQLSERVER$EXPRESS -Q "dbcc checkdb ('master') with DATA_PURITY, NO_INFOMSGS;" -U maintenanceUser -P ""weirdPassword
+   ```
  - Use `EXISTS` or `NOT EXISTS` if referencing a subquery, and `IN` or `NOT IN` when have a list of literal values.
    More details [here](https://www.brentozar.com/archive/2018/08/a-common-query-error/).
  - For concatenate unicode strings:
@@ -320,6 +438,7 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
    - avoid truncation of string literals, simply ensure that one piece is converted to `nvarchar(max)`.
    Example:
    ```tsql
+   /* good */
    DECLARE @nvcmaxVariable nvarchar(max);
    SET @nvcmaxVariable = CAST(N'ಠ russian anomaly ЯЁЪ ಠ ' AS nvarchar(max)) + N'something else' + N'another';
    SELECT @nvcmaxVariable;
@@ -339,7 +458,7 @@ SQL Server T-SQL Coding Conventions, Best Practices, and Programming Guidelines.
     DECLARE @myGoodCharVariable      char(7);
     DECLARE @myGoodNCharVariable     nchar(10);
     ```
-    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/using-a-variable-length-datatype-without-explicit-length-the-whys-and-wherefores).
+    More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/using-a-variable-length-datatype-without-explicit-length-the-whys-and-wherefores) and [here](https://sqlblog.org/2009/10/09/bad-habits-to-kick-declaring-varchar-without-length).
  - Use only [`ORIGINAL_LOGIN()`](https://docs.microsoft.com/en-us/sql/t-sql/functions/original-login-transact-sql) function because is the only function that consistently returns the actual login name that we started with regardless of impersonation.
    More details [here](https://sqlstudies.com/2015/06/24/which-user-function-do-i-use/).
  - Always use `IF` statement with `BEGIN-END` block to prevent errors with multi line statements:
@@ -374,30 +493,34 @@ TSQL Example with formating:
 ```tsql
 WITH CTE_MyCTE AS (
     SELECT
-                t1.Value1  AS Val1
-              , t1.Value2  AS Val2
-              , t2.Value3  AS Val3
-     INNER JOIN dbo.Table3 AS t2
-             ON t1.Value1 = t2.Value1
-     WHERE      t1.Value1 > 1
-       AND      t2.Value2 >= 101
+        t1.Value1  AS Val1
+        , t1.Value2  AS Val2
+        , t2.Value3  AS Val3
+    INNER JOIN dbo.Table3 AS t2
+            ON t1.Value1 = t2.Value1
+    WHERE t1.Value1 > 1
+         AND t2.Value2 >= 101
 )
 SELECT
-         t1.Value1 AS Val1
-       , t1.Value2 AS Val2
-       , t2.Value3 AS Val3
-INTO     #Table3
-FROM     CTE_MyCTE AS t1
+    t1.Value1 AS Val1
+    , t1.Value2 AS Val2
+    , t2.Value3 AS Val3
+INTO #Table3
+FROM CTE_MyCTE AS t1
 ORDER BY t2.Value2;
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 
-### Stored procedures and functions programming style
 <a id="programming-style"></a>
+### Stored procedures and functions programming style
 
- - All stored procedures and functions should use `ALTER` statement and start with the object presence check (see example below)
+Recommendations from Microsoft: [Stored procedure Best practice][11]
+
+ - All stored procedures and functions should use `ALTER` statement and start with the object presence check (see example below) for saving `GRANTs` on your object.
+   Also if you use Query Store and plan forcing and `DROP` and then `CREATE` new object you loosing plan forcing, more details [here](https://www.scarydba.com/2020/03/02/query-store-plan-forcing-and-drop-create/).
+   For SQL Server 2016 and higher you can use new `CREATE OR ALTER` statement.
  - `ALTER` statement should be preceded by 2 line breaks
  - Parameters name should be in **camelCase**
  - Parameters should be placed under procedure name divided by line breaks
@@ -407,10 +530,12 @@ ORDER BY t2.Value2;
  - Always use `BEGIN TRY` and `BEGIN CATCH` for error handling
  - Always use multi-line comment `/* */` instead in-line comment `--`
  - Use `SET NOCOUNT ON;` for stops the message that shows the count of the number of rows affected by a Transact-SQL statement and decreasing network traffic.
-   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-set-nocount-problem-pe008-pe009).
+   More details [here](https://www.red-gate.com/hub/product-learning/sql-prompt/finding-code-smells-using-sql-prompt-set-nocount-problem-pe008-pe009) and [here][11].
  - Do not use `SET NOCOUNT OFF;` because it is default behavior
  - Use `RAISERROR` instead `PRINT` if you want to give feedback about the state of the currently executing SQL batch without lags.
    More details [here](http://sqlity.net/en/984/print-vs-raiserror/) and [here](http://sqlservercode.blogspot.com/2019/01/print-disruptor-of-batch-deletes-in-sql.html).
+ - Call natively-compiled stored procedures without named parameters.
+   More details [here](https://sqlperformance.com/2015/06/t-sql-queries/how-not-to-call-hekaton-procedures).
  - All code should be self documenting
  - T-SQL code, triggers, stored procedures, functions, scripts, should have a standard comment-documentation banner:
 ```
@@ -437,23 +562,23 @@ GO
 
 
 ALTER PROCEDURE dbo.usp_StoredProcedure(
-                @parameterValue1 smallint
-              , @parameterValue2 nvarchar(300)
-              , @debug           bit = 0
+      @parameterValue1 smallint
+    , @parameterValue2 nvarchar(300)
+    , @debug           bit = 0
 )
 /*
 <documentation>
-  <summary>Simple example of tsql procedure</summary>
-  <returns>nothing</returns>
-  <issues>No</issues>
-  <author>Konstantin Taranov</author>
-  <created>2019-01-01</created>
-  <modified>2019-11-25 by Konstantin Taranov</modified>
-  <version>1.2</version>
-  <sourceLink>-</sourceLink>
-  <example1>EXECUTE dbo.usp_StoredProcedure
-        @parameterValue1 = 0
-      , @parameterValue2 = N'BULK'</example1>
+    <summary>Simple example of tsql procedure</summary>
+    <returns>nothing</returns>
+    <issues>No</issues>
+    <author>Konstantin Taranov</author>
+    <created>2019-01-01</created>
+    <modified>2019-11-25 by Konstantin Taranov</modified>
+    <version>1.2</version>
+    <sourceLink>-</sourceLink>
+    <example1>EXECUTE dbo.usp_StoredProcedure
+          @parameterValue1 = 0
+        , @parameterValue2 = N'BULK'</example1>
 </documentation>
 */
 AS
@@ -482,8 +607,9 @@ GO
 **[⬆ back to top](#table-of-contents)**
 
 
-### Dynamic T-SQL Recommendation
 <a id="dynamic-t-sql-recommendation"></a>
+### Dynamic T-SQL Recommendation
+
 **Highly recommended to read awesome detailed article about dynamic T-SQL by Erland Sommarskog: [The Curse and Blessings of Dynamic SQL](http://sommarskog.se/dynamic_sql.html)**
 
 Dynamic SQL is a programming technique that allows you to construct SQL statements dynamically at runtime.
@@ -588,9 +714,12 @@ More details [here](http://www.sqlservertutorial.net/sql-server-stored-procedure
   IF @debug = 1 SELECT @tsql AS "tsql" ELSE EXEC sp_executesql @tsql;
   ```
 
+**[⬆ back to top](#table-of-contents)**
 
-## Official Reference and useful links
+
 <a id="reference"></a>
+## Official Reference and useful links
+
  - [Transact-SQL Formatting Standards](https://www.simple-talk.com/sql/t-sql-programming/transact-sql-formatting-standards-%28coding-styles%29/) (by Robert Sheldon)
  - [Subjectivity: Naming Standards](http://blogs.sqlsentry.com/aaronbertrand/subjectivity-naming-standards/) (by Aaron Bertrand)
  - [General Database Conventions](http://kejser.org/database-naming-conventions/general-database-conventions/) (by Thomas Kejser)
@@ -627,3 +756,9 @@ More details [here](http://www.sqlservertutorial.net/sql-server-stored-procedure
 [`sp_executesql`]:https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql
 [`EXEC`]:https://docs.microsoft.com/en-us/sql/t-sql/language-elements/execute-transact-sql
 [10]:https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql
+[`INFORMATION_SCHEMA`]:https://docs.microsoft.com/en-us/sql/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql
+[11]:https://docs.microsoft.com/en-us/sql/t-sql/statements/create-procedure-transact-sql#best-practices
+[explicit transactions]:https://docs.microsoft.com/en-us/sql/t-sql/language-elements/transactions-transact-sql
+[autocommit]:https://docs.microsoft.com/en-us/sql/t-sql/statements/set-implicit-transactions-transact-sql
+[`ANSI`]:http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip
+[hints]https://docs.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql
