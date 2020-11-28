@@ -39,7 +39,7 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
  - [SQL Server Name Convention and T-SQL Programming Style](SQL%20Server%20Name%20Convention%20and%20T-SQL%20Programming%20Style.md)
 
 
-## Useful links for name conventions
+## Useful links and Repos for name conventions
  - [PEP 8 — the Style Guide for Python Code](https://pep8.org/)
  - [PHP Standards Recommendations](https://www.php-fig.org/psr/)
  - [NET Naming Guidelines][1]
@@ -72,6 +72,18 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
    - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
    - [SEI CERT Perl Coding Standard](https://wiki.sei.cmu.edu/confluence/display/perl/SEI+CERT+Perl+Coding+Standard)
  - [SQL Style Guide](https://www.sqlstyle.guide)
+ - [Microsoft C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
+ - [Coding Guidelines for C#](https://github.com/justinamiller/Coding-Standards)
+ - JavaScript
+    - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+    - [Перевод «JavaScript Style Guide» от Airbnb](https://github.com/leonidlebedev/javascript-airbnb)
+    - [Standard ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
+    - [Microsoft TypeScript Coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+    - [Mozilla Javascript Manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+ - [Sensible CSS Guidelines](https://github.com/chris-pearce/css-guidelines)
+ - [Gamemakin Unreal Engine 4 Style Guide](https://github.com/Allar/ue4-style-guide)
+ - [Airbnb Swift Style Guide](https://github.com/airbnb/swift)
+ - [Awesome Naming - A curated list for when naming things](https://github.com/gruhn/awesome-naming)
 
 
 ## Relation Database Documentation
@@ -82,23 +94,9 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
  - [MySQL documentation](http://docs.oracle.com/cd/E17952_01/index.html)
 
 
-## Different Languages Style Guides
- - [C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions)
- - JavaScript
-    - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-    - [Перевод «JavaScript Style Guide» от Airbnb](https://github.com/leonidlebedev/javascript-airbnb)
-    - [Standard ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-    - [Microsoft TypeScript Coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
-    - [Mozilla Javascript Manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
- - [Sensible CSS Guidelines](https://github.com/chris-pearce/css-guidelines)
- - R Language ([R Language Definition])
- - Transact-SQL ([T-SQL Reference])
- - Procedural Language/PostGres Structured Query Language ([PL/pgSQL Manual])
- - [Python PEP](https://www.python.org/dev/peps/)
-
-
 ## R Language
  - [Google R Style Guide][3]
+ - [R Language Definition](http://cran.r-project.org/doc/manuals/R-lang.html)
  - [Hadley Wickham R style guide](http://r-pkgs.had.co.nz/style.html)
  - [Stackoverflow R discussion](http://stackoverflow.com/questions/10013545/are-there-any-official-naming-conventions-for-r)
  - [Bioconductor R Coding Standards](http://bioconductor.org/developers/how-to/coding-style/)
@@ -117,6 +115,5 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 [6]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
 
 [C# Programming Guide]:http://msdn.microsoft.com/ru-ru/library/67ef8sbd.aspx
-[R Language Definition]:http://cran.r-project.org/doc/manuals/R-lang.html
-[T-SQL Reference]:https://docs.microsoft.com/en-us/sql/t-sql/language-reference
-[PL/pgSQL Manual]:https://www.postgresql.org/docs/manuals/
+
+
