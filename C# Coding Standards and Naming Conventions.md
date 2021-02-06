@@ -400,8 +400,6 @@ public void ReadBarcodeEventHandler(object sender, ReadBarcodeEventArgs e)
 }
 ```
 
-***Why: consistent with the Microsoft's .NET Framework***
-
 ***Why: consistent with the Microsoft's .NET Framework and consistent with prior rule of no type indicators in identifiers.***
 
 #### 25. Do use suffix Exception at creation of the new classes comprising the information on exception:
