@@ -11,7 +11,7 @@
 [issues badge]:https://img.shields.io/github/issues/ktaranov/naming-convention.svg
 [contributors_badge]:https://img.shields.io/github/contributors/ktaranov/naming-convention.svg
 
-[licence]:https://github.com/ktaranov/naming-convention/blob/master/LICENSE.md
+[licence]:https://github.com/ktaranov/naming-convention/blob/master/LICENSE
 [stars]:https://github.com/ktaranov/naming-convention/stargazers
 [forks]:https://github.com/ktaranov/naming-convention/network
 [issues]:https://github.com/ktaranov/naming-convention/issues
