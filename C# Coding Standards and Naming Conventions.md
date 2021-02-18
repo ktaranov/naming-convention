@@ -413,7 +413,7 @@ public class BarcodeReadException : System.Exception
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
 
-#### 26. Do use prefix Any, Is, Have or similar keywords for boolean identifier :
+#### 26. Do use prefix Any, Is, Have or similar keywords for boolean identifier:
 
 ```csharp 
 // Correct
@@ -423,6 +423,24 @@ public static bool IsNullOrEmpty(string value) {
 ```
 
 ***Why: consistent with the Microsoft's .NET Framework and easy to read.***
+
+#### 27. Use Named Arguments in method calls:
+When calling a method, arguments are passed with the parameter name followed by a colon and a value. 
+
+```csharp
+// Method
+public void DoSomething(string foo, int bar) 
+{
+...
+}
+
+// Avoid
+DoSomething("someString", 1);
+// Correct
+DoSomething(foo: "someString", bar: 1);
+```
+
+***Why: consistent with the Microsoft's .NET Framework and easy to read. In Named Arguments, we do not need to pass the parameters in order as defined on method definition, so we can pass the arguments in any order on method calling.***
 
 ## Offical Reference
 
