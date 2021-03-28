@@ -3,6 +3,7 @@
 
 | Object Name               | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask          | Underscores |
 |:--------------------------|:-----------|-------:|:-------|:-------|:-------|:-------------|:-------------------|:------------|
+| Namespace name            | PascalCase |    128 | Yes    | Yes    | No     | No           | [A-z][0-9]         | No          |
 | Class name                | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Constructor name          | PascalCase |    128 | No     | No     | Yes    | No           | [A-z][0-9]         | No          |
 | Method name               | PascalCase |    128 | Yes    | No     | No     | No           | [A-z][0-9]         | No          |
@@ -58,7 +59,7 @@ int iCounter;
 string strName;
 ```
 
-***Why: consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy (via tooltips). In general you want to avoid type indicators in any identifier.***
+***Why: consistent with the Microsoft's .NET Framework and Visual Studio IDE makes determining types very easy (via tooltips). In general, you want to avoid type indicators in any identifier.***
 
 #### 4. Do not use Screaming Caps for constants or readonly variables:
 
@@ -208,6 +209,9 @@ public partial class Task
 
 ```csharp 
 // Examples
+namespace Company.Technology.Feature.Subnamespace
+{
+}
 namespace Company.Product.Module.SubModule
 {
 }
