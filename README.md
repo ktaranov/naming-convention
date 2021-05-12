@@ -87,13 +87,13 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
  - [JetBrains JSON standard for documenting web component libraries for IDEs, documentation generators and other tools](https://github.com/JetBrains/web-types)
  - [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md)
  - [Data Import Best Practices in Power BI](https://www.sqlbi.com/articles/data-import-best-practices-in-power-bi/) (by Marco Russo)
+ - [Naming temporary columns in DAX](https://www.sqlbi.com/articles/naming-temporary-columns-in-dax/) (by Marco Russo, Alberto Ferrari)
 
 
 ## Relation Database Documentation
  - [SQL Server Documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)
  - [SQLite Documentation](https://www.sqlite.org/docs.html)
  - [PostgreSQL Manual](http://www.postgresql.org/docs/current/static/)
- - [Oracle DB documentation](https://docs.oracle.com/en/database/database.html)
  - [MySQL documentation](http://docs.oracle.com/cd/E17952_01/index.html)
 
 
@@ -116,7 +116,3 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 [4]:https://github.com/google/styleguide/blob/gh-pages/pyguide.md
 [5]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
 [6]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
-
-[C# Programming Guide]:http://msdn.microsoft.com/ru-ru/library/67ef8sbd.aspx
-
-
