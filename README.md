@@ -42,11 +42,11 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 ## Useful links and Repos for name conventions
  - [PEP 8 — the Style Guide for Python Code](https://pep8.org/)
  - [PHP Standards Recommendations](https://www.php-fig.org/psr/)
- - [NET Naming Guidelines][1]
- - [Framework Design Guidelines][2]
+ - [NET Naming Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines)
+ - [Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines)
  - [Google style guides for open source projects](https://github.com/google/styleguide)
    - [Google R Style Guide][3]
-   - [Google Python Style Guide][4]
+   - [Google Python Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md)
    - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
    - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
    - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
@@ -58,8 +58,8 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
    - [Google Vimscript Guide](https://google.github.io/styleguide/vimscriptfull.xml)
    - [Google XML Document Format Style Guide](https://google.github.io/styleguide/xmlstyle.html)
    - [An AngularJS Style Guide for Closure Users at Google](https://google.github.io/styleguide/angularjs-google-style.html)  
- - [MSDN Powershell Style Guide][5]
- - [MSDN Approved Verbs for Windows PowerShellCommands][6]
+ - [Powershell Cmdlet Development Guidelines](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-development-guidelines)
+ - [Approved Verbs for PowerShell Commands](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands)
  - [The PowerShell Best Practices and Style Guide](https://github.com/PoshCode/PowerShellPracticeAndStyle)
  - [PostgreSQL naming conventions](https://stackoverflow.com/q/2878248/2298061)
  - [Lint commit messages](https://github.com/conventional-changelog/commitlint)
@@ -88,6 +88,7 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
  - [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md)
  - [Data Import Best Practices in Power BI](https://www.sqlbi.com/articles/data-import-best-practices-in-power-bi/) (by Marco Russo)
  - [Naming temporary columns in DAX](https://www.sqlbi.com/articles/naming-temporary-columns-in-dax/) (by Marco Russo, Alberto Ferrari)
+ - [Python functions naming: 10 tips](https://melevir.medium.com/python-functions-naming-tips-376f12549f9) (by Ilya Lebedev)
 
 
 ## Relation Database Documentation
@@ -110,9 +111,4 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
 ## License
 [MIT](/LICENSE)
 
-[1]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
-[2]:https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines
 [3]:https://google.github.io/styleguide/Rguide.xml
-[4]:https://github.com/google/styleguide/blob/gh-pages/pyguide.md
-[5]:http://msdn.microsoft.com/en-us/library/dd878270%28v=vs.85%29.aspx
-[6]:http://msdn.microsoft.com/en-us/library/ms714428%28v=vs.85%29.aspx
