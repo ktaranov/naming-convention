@@ -2,7 +2,7 @@
 
 | Object Name        | Notation   | Length | Plural | Prefix | Suffix | Abbreviation | Char Mask  | Underscores |
 |--------------------|------------|--------|--------|--------|--------|--------------|------------|-------------|
-| Function name      | PascalCase |     50 | Yes    | No     | Yes    | Yes          | [A-z][0-9] | No          |
+| Function name      | camelCase  |     50 | Yes    | No     | Yes    | Yes          | [A-z][0-9] | No          |
 | Function arguments | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Local variables    | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
 | Constants name     | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9] | No          |
@@ -20,8 +20,8 @@ Coding conventions secure quality:
 1. Make code maintenance easier
 
 Always use the same naming convention for all your code. For example:
-1. Do use camelCasing for variable and function arguments names;
-2. Do use PascalCasing for function names and global variable;
+1. Do use camelCasing for variable, function names and function arguments names;
+2. Do use PascalCasing for global variable;
 3. Constants (like PI) written in UPPERCASE;
 4. Do not use under_scores in variable, constants, function arguments or function names;
 5. Do not use hyphens in JavaScript names.
@@ -29,10 +29,10 @@ Always use the same naming convention for all your code. For example:
 
 ### Naming Conventions
 
-Do use PascalCasing for function names:
+Do use camelCasing for function names:
 
 ```javascript
-    function HelloWorld()	
+    function HhlloWorld()	
     {
     }
 ```
@@ -40,7 +40,7 @@ Do use PascalCasing for function names:
 Do use camelCasing for function arguments and local variables: 
 
 ```javascript
-    function Hello(isShow)	
+    function hello(isShow)	
     {
     }
 
@@ -71,8 +71,7 @@ Always use 4 spaces for indentation of code blocks:
 Functions:
 
 ```javascript
-    function ToCelsius(fahrenheit) 
-    {
+    function ToCelsius(fahrenheit) {
          return (5/9) * (fahrenheit-32);
     }
 ```
@@ -195,5 +194,5 @@ A consequence of using "untidy" HTML styles, might result in JavaScript errors. 
 
 ## Offical Reference
 
-1. [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
+1. [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html#introduction)
 2. [JavaScript Style Guide and Coding Conventions](http://www.w3schools.com/js/js_conventions.asp) 
