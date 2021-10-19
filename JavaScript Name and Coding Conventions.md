@@ -20,9 +20,9 @@ Coding conventions secure quality:
 1. Make code maintenance easier
 
 Always use the same naming convention for all your code. For example:
-1. Do use camelCasing for variable, function names and function arguments names;
-2. Do use PascalCasing for global variable;
-3. Constants (like PI) written in UPPERCASE;
+1. Do use camelCasing for variables, function names and function argument names;
+2. Do use PascalCasing for global variables;
+3. Do use UPPERCASE for constants (like PI);
 4. Do not use under_scores in variable, constants, function arguments or function names;
 5. Do not use hyphens in JavaScript names.
 
@@ -32,25 +32,25 @@ Always use the same naming convention for all your code. For example:
 Do use camelCasing for function names:
 
 ```javascript
-    function HhlloWorld()	
-    {
-    }
+function helloWorld()	
+{
+}
 ```
 
 Do use camelCasing for function arguments and local variables: 
 
 ```javascript
-    function hello(isShow)	
-    {
-    }
+function hello(isShow)	
+{
+}
 
-    firstName = "John";
-    lastName = "Doe";
-    
-    price = 19.90;
-    discount = 0.10;
-    
-    fullPrice = price * 100 / discount;
+firstName = "John";
+lastName = "Doe";
+
+price = 19.90;
+discount = 0.10;
+
+fullPrice = price * 100 / discount;
 ```
 
 *Note: Don't start names with a $ sign. It will put you in conflict with many JavaScript library names.*
@@ -60,9 +60,10 @@ Do use camelCasing for function arguments and local variables:
 Always put spaces around operators ( = + / * ), and after commas:
 
 Examples:
-
-	var x = y + z;
-	var values = ["Volvo", "Saab", "Fiat"];
+```javascript
+var x = y + z;
+var values = ["Volvo", "Saab", "Fiat"];
+```
 
 ### Code Indentation
 
@@ -71,9 +72,9 @@ Always use 4 spaces for indentation of code blocks:
 Functions:
 
 ```javascript
-    function ToCelsius(fahrenheit) {
-         return (5/9) * (fahrenheit-32);
-    }
+function ToCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
 ```
 
 *Note: Do not use tabs (tabulators) for indentation. Text editors interpret tabs differently.* 
@@ -85,14 +86,14 @@ Functions:
 Examples:
 
 ```javascript	
-    var values = ["Volvo", "Saab", "Fiat"];
-    
-    var person = {
-        firstName: "John",
-        lastName: "Doe",
-        age: 50,
-        eyeColor: "blue"
-    };
+var values = ["Volvo", "Saab", "Fiat"];
+
+var person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};
 ```
 
 ### General rules for complex (compound) statements:
@@ -105,27 +106,27 @@ Examples:
 Functions:
 
 ```javascript
-    function toCelsius(fahrenheit) {
-         return (5/9) * (fahrenheit-32);
-    }
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
 ```
 
 Loops:
 
 ```javascript
-	for (i = 0; i < 5; i++) {
-	    x += i;
-	}
+for (i = 0; i < 5; i++) {
+    x += i;
+}
 ```
 
 Conditionals:
 
 ```javascript
-    if (time < 20) {
-        greeting = "Good day";
-    } else {
-        greeting = "Good evening";
-    }
+if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
 ```
 
 
@@ -134,27 +135,27 @@ Conditionals:
 General rules for object definitions:
 
 1. Place the opening bracket on the same line as the object name.
-2. Use colon plus one space between each property and it's value.
+2. Use colon plus one space between each property and its value.
 3. Use quotes around string values, not around numeric values.
 4. Do not add a comma after the last property-value pair.
 5. Place the closing bracket, on a new line, without leading spaces.
-6. Always end  an object definition with a semicolon.
+6. Always end an object definition with a semicolon.
 
 Example:
 
 ```javascript
-    var person = {
-        firstName: "John",
-        lastName: "Doe",
-        age: 50,
-        eyeColor: "blue"
-    };
+var person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};
 ```
 
 Short objects can be written compressed, on one line, like this:
 
 ```javascript
-    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 ```
 
 ### Line Length < 80
@@ -164,7 +165,7 @@ For readability, avoid lines longer than 80 characters. If a JavaScript statemen
 Example:
 
 ```javascript
-    document.getElementById("demo").innerHTML = "Hello World.";
+document.getElementById("demo").innerHTML = "Hello World.";
 ```
 
 ### Loading JavaScript in HTML
@@ -172,7 +173,7 @@ Example:
 Use simple syntax for loading external scripts (the type attribute is not necessary):
 
 ```html	
-	<script src="myscript.js">
+<script src="myscript.js">
 ```
 
 ### Accessing HTML Elements
@@ -180,8 +181,8 @@ Use simple syntax for loading external scripts (the type attribute is not necess
 A consequence of using "untidy" HTML styles, might result in JavaScript errors. These two JavaScript statements will produce different results:
 
 ```javascript
-    var obj = getElementById("Demo")
-    var obj = getElementById("demo")
+var obj = getElementById("Demo")
+var obj = getElementById("demo")
 ```
 
 *If possible, use it naming convention (as JavaScript) in HTML.* 
