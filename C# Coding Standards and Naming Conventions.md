@@ -10,7 +10,8 @@
 | Method arguments          | camelCase  |    128 | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Local variables           | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Constants name            | PascalCase |     50 | No     | No     | No     | No           | [A-z][0-9]         | No          |
-| Field name                | camelCase  |     50 | Yes    | No     | No     | Yes          | [A-z][0-9]         | Yes         |
+| Field name Public         | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
+| Field name Private        | _camelCase |     50 | Yes    | No     | No     | Yes          | _[A-z][0-9]        | Yes         |
 | Properties name           | PascalCase |     50 | Yes    | No     | No     | Yes          | [A-z][0-9]         | No          |
 | Delegate name             | PascalCase |    128 | No     | No     | Yes    | Yes          | [A-z]              | No          |
 | Enum type name            | PascalCase |    128 | Yes    | No     | No     | No           | [A-z]              | No          |
@@ -452,3 +453,5 @@ DoSomething(foo: "someString", bar: 1);
 2. [DoFactory C# Coding Standards and Naming Conventions](http://www.dofactory.com/reference/csharp-coding-standards) 
 3. [MSDN Naming Guidelines](http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx)
 4. [MSDN Framework Design Guidelines](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+5. [Common C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+6. [Github C# Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
