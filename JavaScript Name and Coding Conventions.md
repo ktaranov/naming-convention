@@ -193,7 +193,7 @@ var obj = getElementById("demo")
 2. CSS files should have a .css extension;
 3. JavaScript files should have a .js extension.
 
-## Offical Reference
+## Official Reference
 
 1. [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html#introduction)
 2. [JavaScript Style Guide and Coding Conventions](http://www.w3schools.com/js/js_conventions.asp) 
