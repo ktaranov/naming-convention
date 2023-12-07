@@ -89,6 +89,9 @@ Reasons for using a naming convention (as opposed to allowing programmers to cho
  - [Data Import Best Practices in Power BI](https://www.sqlbi.com/articles/data-import-best-practices-in-power-bi/) (by Marco Russo)
  - [Naming temporary columns in DAX](https://www.sqlbi.com/articles/naming-temporary-columns-in-dax/) (by Marco Russo, Alberto Ferrari)
  - [Python functions naming: 10 tips](https://melevir.medium.com/python-functions-naming-tips-376f12549f9) (by Ilya Lebedev)
+ - [Conventional Commits](https://www.conventionalcommits.org/)
+ - [conventional: comments - Comments that are easy to grok and grep](https://conventionalcomments.org/) (by Paul Slaughter)
+ - [Google Engineering Practices Documentation](https://github.com/google/eng-practices)
 
 
 ## Relation Database Documentation
